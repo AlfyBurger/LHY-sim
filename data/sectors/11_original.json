@@ -110,6 +110,14 @@
   "J10": {
    "building": "wooden",
    "hut": true
+  },
+  "A11": {
+   "terrain": "woods",
+   "note": "edge half hex, woods reach in from B10/B11 (R8)"
+  },
+  "K1": {
+   "terrain": "woods",
+   "note": "edge half hex, woods reach in from J1 (R8)"
   }
  },
  "roads": [
