@@ -236,14 +236,24 @@
    "H5",
    "I6",
    "J6",
-   "K7"
+   "K7",
+   "@E"
   ],
   [
+   "@W",
    "A7",
    "B6",
    "C7",
    "D7",
    "E7"
+  ],
+  [
+   "@W",
+   "A2"
+  ],
+  [
+   "K12",
+   "@E"
   ]
  ],
  "walls": [],
@@ -577,7 +587,7 @@
   "Hill close calls: G11 and H11 (bold contour passes next to the centre dot), F12 (line runs through the dot; read as not hill), E11.",
   "Road junction near F4/F5: read as F4-G5 (east road) and F4-F5-E6 (south road, past the church). East road exits at K7 (between K6 and K7).",
   "West road A7-B6-C7-D7-E7: D7 is heavy woods with the road along its north edge \u2014 forest road or ordinary road?",
-  "Pale tracks (I3-I4-I5, J8-J9, J12-K12, A2 at the west edge) read as cosmetic, not roads or paths.",
+  "Pale tracks inside the map (I3-I4-I5, J8-J9, J12) read as decorative. Edge stubs A2 (west) and K12 (east) read as road hexes leading off the map (rule from sector 10 review).",
   "Buildings: A3 (2), D5 (2), I3 farm (3), F5 church (stone), E12 (wooden + hut). Some outlines are boxes where tracing failed (marked fallback_box). The haystack-like structure in I3 is not counted as a building.",
   "Thin contours not yet encoded (second pass)."
  ]

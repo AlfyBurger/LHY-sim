@@ -29,8 +29,18 @@ def main(js, img, out):
         if h.get("hut"): g.ellipse((x+60, y-110, x+120, y-50), fill=(255, 220, 0, 230))
         if "level" in h and h["level"]:
             g.text((x, y-120), f"L{h['level']}", fill=(255, 255, 255, 255), font=f, anchor='mm', stroke_width=6, stroke_fill=(150, 0, 150, 255))
+    def pts(road):
+        out = []
+        for i, h in enumerate(road):
+            if h.startswith("@"):
+                nb = road[i - 1] if i > 0 else road[i + 1]
+                x, y = center(nb)
+                out.append({"@W": (0, y), "@E": (3300, y), "@N": (x, 0), "@S": (x, 5100)}[h])
+            else:
+                out.append(center(h))
+        return out
     for road in d.get("roads", []):
-        g.line([center(h) for h in road], fill=(255, 140, 0, 220), width=18)
+        g.line(pts(road), fill=(255, 140, 0, 220), width=18)
     for e in d.get("roads_edges", []):
         g.line([center(e[0]), center(e[1])], fill=(255, 140, 0, 220), width=18)
     for b in d.get("buildings", []):
