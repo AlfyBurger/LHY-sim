@@ -11,24 +11,24 @@ Product pages checked: Vol. 1 3rd printing (p-1159), Vol. 2 2nd printing (p-1205
 | AOE Cntrs 1F (US) Proof6.png | Vol. 2 Airborne over Europe (2nd printing) | 0.1 MB | OK | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY2/AOE+Cntrs+1F+(US)+Proof6.png |
 | AOE Cntrs 2F (GER) Proof5.png | Vol. 2 Airborne over Europe (2nd printing) | 0.3 MB | OK | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY2/AOE+Cntrs+2F+(GER)+Proof5.png |
 | AOEMissions.pdf | Vol. 2 Airborne over Europe (2nd printing) | 0.7 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/AOEMissions.pdf |
-| AOE_ITA.pdf | Vol. 2 Airborne over Europe (2nd printing) | 1.9 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY2/AOE_ITA.pdf |
+| AOE_ITA.pdf | Vol. 2 Airborne over Europe (2nd printing) | 1.9 MB | removed: translation | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY2/AOE_ITA.pdf |
 | AOE_Mission_21B_Variant.pdf | Vol. 2 Airborne over Europe (2nd printing) | 0.3 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/AOE_Mission_21B_Variant.pdf |
 | BritishMissions.pdf | Vol. 5 For King & Country | 0.7 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/BritishMissions.pdf |
 | Errata.pdf | Vol. 1 (3rd printing) | 0.3 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/Errata.pdf |
 | For King and Country_Counter Sheet 1-1.jpg | Vol. 5 For King & Country | 2.2 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY5/For+King+and+Country_Counter+Sheet+1-1.jpg |
 | LHY Basic Training Maps.zip | Vol. 5 For King & Country | 172.8 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/LHY+Basic+Training+Maps.zip |
-| LHY Living Playbook Sept2019.pdf | web search (no longer linked from GMT pages) | 2.2 MB | OK | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY/LHY+Living+Playbook+Sept2019.pdf |
+| LHY Living Playbook Sept2019.pdf | web search (no longer linked from GMT pages) | 2.2 MB | removed: superseded by SeriesPlaybook.pdf | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY/LHY+Living+Playbook+Sept2019.pdf |
 | LHYLivingCombatTables.pdf | Vol. 1 (3rd printing) | 12.4 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/LHYLivingCombatTables.pdf |
 | LHYLivingGameTrax.pdf | Vol. 1 (3rd printing) | 5.0 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/LHYLivingGameTrax.pdf |
 | LHYMissions.pdf | Vol. 1 (3rd printing) | 1.2 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/LHYMissions.pdf |
-| LHYSeriesLivingRules.pdf | Vol. 1 (3rd printing) | 4.9 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/LHYSeriesLivingRules.pdf |
+| LHYSeriesLivingRules.pdf | Vol. 1 (3rd printing) | 4.9 MB | OK (identical to user-supplied copy; that copy is used) | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/LHYSeriesLivingRules.pdf |
 | LHY_24.0_All_for_a_Piece_of_Dirt.pdf | Vol. 5 For King & Country | 0.3 MB | OK | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY/LHY_24.0_All_for_a_Piece_of_Dirt.pdf |
-| LHY_4.0_FKAC_ITA.pdf | Vol. 5 For King & Country | 2.9 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/LHY_4.0_FKAC_ITA.pdf |
+| LHY_4.0_FKAC_ITA.pdf | Vol. 5 For King & Country | 2.9 MB | removed: translation | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/LHY_4.0_FKAC_ITA.pdf |
 | LHY_Countersheet1F(US)_FINAL.jpg | Vol. 1 (3rd printing) | 2.8 MB | OK | https://s3-us-west-2.amazonaws.com/gmtwebsiteassets/LHY/LHY_Countersheet1F(US)_FINAL.jpg |
 | LHY_Countersheet2F(GE)_FINAL.jpg | Vol. 5 For King & Country | 2.8 MB | OK | https://s3-us-west-2.amazonaws.com/gmtwebsiteassets/LHY/LHY_Countersheet2F(GE)_FINAL.jpg |
-| LHY_EOP_Armor.pdf | web search (no longer linked from GMT pages) | 1.5 MB | OK | https://s3-us-west-2.amazonaws.com/gmtwebsiteassets/LHY/LHY_EOP_Armor.pdf |
-| LHY_EOP_Infantry.pdf | web search (no longer linked from GMT pages) | 1.8 MB | OK | https://s3-us-west-2.amazonaws.com/gmtwebsiteassets/LHY/LHY_EOP_Infantry.pdf |
-| LHY_FR_Aug_2020.zip | Vol. 1 (3rd printing) | 5.8 MB | OK | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY/LHY_FR_Aug_2020.zip |
+| LHY_EOP_Armor.pdf | web search (no longer linked from GMT pages) | 1.5 MB | removed: superseded by SeriesPlaybook.pdf 25.2 | https://s3-us-west-2.amazonaws.com/gmtwebsiteassets/LHY/LHY_EOP_Armor.pdf |
+| LHY_EOP_Infantry.pdf | web search (no longer linked from GMT pages) | 1.8 MB | removed: superseded by SeriesPlaybook.pdf 25.1 | https://s3-us-west-2.amazonaws.com/gmtwebsiteassets/LHY/LHY_EOP_Infantry.pdf |
+| LHY_FR_Aug_2020.zip | Vol. 1 (3rd printing) | 5.8 MB | removed: translation | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY/LHY_FR_Aug_2020.zip |
 | LHY_LOS_Examples_2021-05-28.pdf | Vol. 1 (3rd printing) | 23.1 MB | OK | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY/LHY_LOS_Examples_2021-05-28.pdf |
 | LHY_PTO_S27_v1.jpg | Vol. 3 The Solomon Islands | 3.1 MB | OK | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY3/LHY_PTO_S27_v1.jpg |
 | LHY_PTO_S28_v1.jpg | Vol. 3 The Solomon Islands | 2.8 MB | OK | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY3/LHY_PTO_S28_v1.jpg |
@@ -51,5 +51,5 @@ Product pages checked: Vol. 1 3rd printing (p-1159), Vol. 2 2nd printing (p-1205
 | SeriesPlaybook.pdf | Vol. 1 (3rd printing) | 70.6 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/SeriesPlaybook.pdf |
 | Series_Rules_v1.2_Errata.pdf | web search (no longer linked from GMT pages) | 0.0 MB | NOT AVAILABLE (HTTP 403, removed from GMT server) | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/Series_Rules_v1.2_Errata.pdf |
 | SolomonsMissions.pdf | Vol. 3 The Solomon Islands | 0.6 MB | OK | https://gmtwebsiteassets.s3.us-west-2.amazonaws.com/LHY/SolomonsMissions.pdf |
-| TheLastHundredYards_ITA.pdf | Vol. 1 (3rd printing) | 1.9 MB | OK | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY/TheLastHundredYards_ITA.pdf |
+| TheLastHundredYards_ITA.pdf | Vol. 1 (3rd printing) | 1.9 MB | removed: translation | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY/TheLastHundredYards_ITA.pdf |
 | Vol.1 Hidden Setup sectors.zip | Vol. 5 For King & Country | 61.8 MB | OK | https://gmtwebsiteassets.s3-us-west-2.amazonaws.com/LHY/Vol.1+Hidden+Setup+sectors.zip |
