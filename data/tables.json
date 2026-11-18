@@ -1,0 +1,244 @@
+{
+  "_source": "LHY Combat Tables v2026.10.19 (2 pp.) and Game Tracks v5.1.2023; transcribed 2026-11-18. Red numbers on the charts are negative DRMs [Intro].",
+  "small_arms_drm": {
+    "_rule": "11.3.3",
+    "min_attack": -4,
+    "max_attack": 3,
+    "range": {
+      "_doc": "key = firing unit's printed SAV range; value = list of [min_hex, max_hex, drm]",
+      "4":  [[1, 1, 0], [2, 2, -1], [3, 3, -2], [4, 4, -3]],
+      "8":  [[1, 2, 0], [3, 3, -1], [4, 4, -2], [5, 8, -3]],
+      "10": [[1, 3, 0], [4, 4, -1], [5, 5, -2], [6, 10, -3]],
+      "12": [[1, 3, 0], [4, 4, -1], [5, 6, -2], [7, 12, -3]],
+      "15": [[1, 4, 0], [5, 6, -1], [7, 8, -2], [9, 15, -3]]
+    },
+    "underscored_range_ignores_range_drm": true,
+    "modifiers": {
+      "split_fire": {"drm": -2, "rule": "11.3.3d", "reaction_only": true, "units": "infantry, MG, FP"},
+      "motion_fire_current_hex": {"drm": -1, "rule": "11.3.3g", "vehicles_only": true},
+      "motion_fire_adjacent_hex": {"drm": -2, "rule": "11.3.3g", "vehicles_only": true},
+      "per_hindrance": {"drm": -1, "rule": "11.3.3i"},
+      "hex_contains_friendly_vehicle": {"drm": -1, "rule": "11.3.3k"},
+      "suppressed_per_2_markers_fru": {"drm": -1, "rule": "11.3.3b"},
+      "regrouping_fire": {"drm": -1, "rule": "11.3.3f"},
+      "concealed_target": {"drm": -1, "rule": "11.3.3h"},
+      "go_to_ground": {"drm": -1, "rule": "11.3.3l"},
+      "night": {"drm": -1, "rule": "11.3.3m"},
+      "enfilade": {"drm": 1, "rule": "11.3.3e"},
+      "target_density_per_2_steps_over_4_fru": {"drm": 1, "rule": "11.3.3j"},
+      "proximity_fire_within_2": {"drm": 1, "rule": "11.3.3c", "reaction_only": true, "units": "infantry, MG, FP"},
+      "he_vs_building_or_ip": {"drm": 1, "rule": "11.3.3n"},
+      "tem": {"drm": "terrain", "rule": "11.3.3o"}
+    }
+  },
+  "mortar_drm": {
+    "_rule": "11.4.6",
+    "modifiers": {
+      "airburst": {"drm": 1, "rule": "11.4.6a"},
+      "target_density": {"drm": 1, "rule": "11.4.6b"},
+      "tem": {"drm": "terrain (mortar column)", "rule": "11.4.6c"},
+      "grenade_launcher_suppressed": {"drm": -1, "rule": "11.4.6e"},
+      "go_to_ground": {"drm": -1, "rule": "11.4.6d"}
+    }
+  },
+  "mortar_fire_action": {
+    "_rule": "11.4.5",
+    "_doc": "mv = [primary, secondary]; markers = number of MDRM / SMK markers. 76-82mm Sec MDRM '3' is printed in red on the chart (see open question).",
+    "<60mm":        {"mv": [0, null], "mdrm": 1, "smk": 1},
+    "60mm_sec":     {"mv": [0, -1], "mdrm": 2, "smk": 3},
+    "76-82mm_sec":  {"mv": [2, 0], "mdrm": 3, "smk": 5},
+    "76-82mm_plt":  {"mv": [2, 0], "mdrm": 6, "mdrm_russian": 8, "smk": 8},
+    "accuracy": {"primary_if_roll_at_least": 7, "else": "secondary via sector scatter diagram"},
+    "recovery": {"section_le": 4, "platoon_le": 3, "grenade_launcher_le": 5}
+  },
+  "anti_tank_drm": {
+    "_rule": "11.5.4",
+    "min_attack": -4,
+    "max_attack": 8,
+    "atv_vs_fp_or_towed_gun": 1,
+    "range": {
+      "LATW": [[1, 1, 0], [2, 2, -1], [3, 3, -2]],
+      "4":  [[1, 1, 0], [2, 2, -1], [3, 4, -2]],
+      "5":  [[1, 1, 0], [2, 2, -1], [3, 5, -2]],
+      "12": [[1, 5, 0], [6, 8, -1], [9, 12, -2]],
+      "15": [[1, 5, 0], [6, 9, -1], [10, 15, -2]],
+      "18": [[1, 6, 0], [7, 12, -1], [13, 18, -2]],
+      "21": [[1, 7, 0], [8, 14, -1], [15, 21, -2]],
+      "24": [[1, 8, 0], [9, 16, -1], [17, 24, -2]],
+      "30": [[1, 10, 0], [11, 20, -1], [21, 30, -2]]
+    },
+    "modifiers": {
+      "spg_or_towed_gun_fired_when_revealed": {"drm": 1, "rule": "11.5.4k"},
+      "firing_afv_elite": {"drm": 1, "rule": "15.1c"},
+      "split_fire": {"drm": -3, "rule": "11.5.4c", "not_latw": true},
+      "motion_fire_current_hex": {"drm": -1, "rule": "11.5.4d", "not_latw": true},
+      "motion_fire_adjacent_hex": {"drm": -2, "rule": "11.5.4d", "not_latw": true},
+      "opportunity_fire": {"drm": -1, "rule": "11.5.4f"},
+      "per_hindrance": {"drm": -1, "rule": "11.5.4h"},
+      "suppressed_per_2_markers_fru": {"drm": -1, "rule": "11.5.4b"},
+      "motion_target": {"drm": -1, "rule": "11.5.4e"},
+      "concealed_target": {"drm": -1, "rule": "11.5.4g"},
+      "hull_down": {"drm": -1, "rule": "11.5.4i"},
+      "target_is_towed_gun_in_ip_or_building": {"drm": -2, "rule": "11.5.4j"}
+    }
+  },
+  "anti_tank_resolution": {
+    "_rule": "13.2",
+    "destroyed_if": "final > AV (or AEV if enfilade marker)",
+    "shocked_if": "AFV and (final == AV/AEV or (unmodified 10 and final >= AV-2))",
+    "no_effect_if": "target is a vehicle and unmodified roll <= 2"
+  },
+  "small_arms_mortar_resolution": {
+    "_rule": "13.1",
+    "disrupt_if": "final > cohesion of best non-vehicular combat unit (casualty instead if already disrupted, heroic, Russian/Japanese); others in hex take cohesion checks",
+    "casualty_if": "final >= 10: best unit suffers casualty and disrupts; others take cohesion checks",
+    "mortar_76mm_plus_unmodified_10": "one random vehicle in primary impact hex: carrier/FV destroyed, AFV shocked"
+  },
+  "assault_value_modifiers": {
+    "_rule": "14.2",
+    "cohesion_differential": {"avm": "difference, max +3", "rule": "14.2a"},
+    "assaulting_regrouping_unit": {"avm": 1, "side": "attacker", "rule": "14.2b"},
+    "defender_rural_building_ip_or_behind_wall": {"avm": 1, "side": "defender", "rule": "14.2c", "note": "excluding huts"},
+    "defender_concealed": {"avm": 1, "side": "defender", "rule": "14.2d"},
+    "latw_ft_vs_fp_towed_gun_urban": {"avm": "1/2", "side": "attacker", "rule": "14.2e", "note": "printed '1/2'; EXC ATR (see open question)"},
+    "heroic_vs_fp": {"avm": 1, "side": "attacker", "rule": "14.2f"},
+    "defender_in_hill_hex": {"avm": 1, "side": "defender", "rule": "14.2g"},
+    "envelopment": {"avm": 2, "side": "attacker", "rule": "14.2h"},
+    "defender_urban_building_or_urban_road": {"avm": 2, "side": "defender", "rule": "14.2i"},
+    "fragmented_assault": {"avm": -1, "side": "attacker", "rule": "14.2j"},
+    "participating_vehicle_in_motion": {"avm": -1, "side": "owner", "rule": "14.2k"}
+  },
+  "assault_resolution": {
+    "_rule": "14.0",
+    "final_drm_limit": 4,
+    "rows": [
+      {"min": 14, "max": 99, "steps": ["attacker VDA", "riders/passengers unload", "defender retreats 4 hexes; retreating non-vehicular units suffer a casualty and disrupt unless already disrupted (RU/JP: best unit casualty, others cohesion check, casualty if fail)", "attacker may advance once into adjacent hex; assault if occupied", "leader/FT loss checks, PP", "mark Russian/Japanese non-vehicular units regrouping"]},
+      {"min": 10, "max": 13, "steps": ["both VDA", "riders/passengers unload", "defender retreats: disrupted retreating non-vehicular units suffer a casualty; undisrupted disrupt, retreat and cohesion check, casualty if fail (RU/JP: best unit casualty)", "leader/FT loss checks, PP", "mark Russian/Japanese non-vehicular units regrouping"]},
+      {"min": 6, "max": 9, "steps": ["urban assault: unmodified 6 or 7 -> best attacking and defending combat unit each suffer a casualty", "both VDA", "riders/passengers unload", "defender retreats: retreating non-vehicular units cohesion check (RU/JP: best unit check, casualty if fail)", "leader/FT loss checks, PP", "mark all undisrupted attacking/defending non-vehicular units regrouping"]},
+      {"min": 2, "max": 5, "steps": ["urban assault: unmodified 4 or 5 -> best attacking combat unit suffers a casualty", "both VDA", "riders/passengers unload", "attacker retreats: retreating non-vehicular units cohesion check (RU/JP: best unit check, casualty if fail)", "leader/FT loss checks, PP", "mark all undisrupted attacking/defending non-vehicular units regrouping"]},
+      {"min": -1, "max": 1, "steps": ["both VDA", "riders/passengers unload", "attacker retreats: disrupted retreating non-vehicular units suffer a casualty; undisrupted disrupt, retreat and cohesion check, casualty if fail (RU/JP: best unit casualty)", "leader/FT loss checks, PP", "mark Russian/Japanese non-vehicular units regrouping"]},
+      {"min": -99, "max": -2, "steps": ["defender VDA", "riders/passengers unload", "attacking units retreat 4 hexes; retreating non-vehicular units suffer a casualty and disrupt unless already disrupted (RU/JP: best unit casualty, others cohesion check)", "defender may advance once into adjacent hex; assault if occupied by an enemy unit", "leader/FT loss checks, PP", "mark Russian/Japanese non-vehicular units regrouping"]}
+    ]
+  },
+  "vehicle_destruction": {
+    "_rule": "14.3.2",
+    "max_net_drm": 8,
+    "destroyed_if_at_least": 10,
+    "friendly_force_includes_undisrupted": [
+      {"drm": 2, "if": "any squad or fortified position; or German MG or infantry section after 9/43; or Japanese/Russian reduced squad or section"},
+      {"drm": 1, "if": "unit with ATV >= 0; or German squad or FP after 9/43"},
+      {"drm": 1, "if": "a heroic unit; or American/British section; or Japanese/Russian squad; or a unit with Assault Value 3"},
+      {"drm": -1, "if": "missions prior to 5/42"}
+    ],
+    "enemy_vehicle_is": [
+      {"drm": 3, "if": "unsupported (no other undisrupted or non-shocked combat unit in the hex) and in or adjacent to a cover-terrain hex, hexside or IP"},
+      {"drm": 2, "if": "carrier, FV, or shocked AFV"},
+      {"drm": 1, "if": "in a sunken road hex entered from a hex that is not a contiguous road hex"},
+      {"drm": -1, "if": "in motion"}
+    ]
+  },
+  "terrain": {
+    "_rule": "4.0",
+    "_doc": "level; mp = [non-vehicular, track, half-track, wheel] (P = prohibited, OT = other terrain); tem = [small arms, mortar]; blocking: hex | feature | none",
+    "rural_urban":      {"level": "OT", "mp": [1, 1, 1, "2/1"], "tem": [0, 0], "blocking": "none", "note": "wheel 2/1: see open question"},
+    "beach":            {"level": 0, "mp": [1, 1, 1, 2], "tem": [0, 0], "blocking": "none"},
+    "woods_jungle":     {"level": 1, "mp": [1.5, "3*", "P", "P"], "tem": [-1, -1], "blocking": "hex"},
+    "heavy_woods":      {"level": 2, "mp": [1.5, "4*", "P", "P"], "tem": [-1, -1], "blocking": "hex"},
+    "tree_line":        {"level": 1, "mp": [0, "+1*", "P", "P"], "tem": [-1, 0], "blocking": "feature", "hexside": true},
+    "orchard_palm_brush": {"level": "1/0/0", "mp": [1, 1, 1, 2], "tem": [0, 0], "blocking": "hex if different levels; hindrance if same level"},
+    "hill":             {"level": "varies", "mp": ["+1/2", "+1", "+1", "+1"], "tem": [-1, 0], "blocking": "hex", "note": "MP per bold contour crossed uphill, not along a road"},
+    "stone_building":   {"level": 1, "mp": [1, 1, 1, 1], "tem": [-3, -3], "blocking": "feature"},
+    "wooden_building":  {"level": 0, "mp": [1, 1, 1, 1], "tem": [-2, -2], "blocking": "feature"},
+    "urban_building":   {"level": 1, "mp": [2, "P", "P", "P"], "tem": [-3, -3], "blocking": "feature"},
+    "hut":              {"level": 0, "mp": [1, 1, 1, 1], "tem": [-1, 0], "blocking": "feature, casts no blind hexes"},
+    "wall":             {"level": 0, "mp": [0, "+1", "P", "P"], "tem": [-1, 0], "blocking": "feature", "hexside": true},
+    "road_railroad":    {"level": "OT", "mp": [1, 1, 1, 1], "tem": ["OT", "OT"]},
+    "path":             {"level": "OT", "mp": [1, 2, "P", "P"], "tem": ["OT", "OT"]},
+    "river":            {"level": -1, "mp": ["1.5/All", "P", "P", "P"], "tem": [0, 0]},
+    "bridge":           {"level": "OT", "mp": [1, 1, 1, 1], "tem": [0, 0]},
+    "ford":             {"level": "OT", "mp": ["+1/2", "+1", "+1", "+2"], "tem": [0, 0]},
+    "marsh":            {"level": 0, "mp": ["1.5/All", "P", "P", "P"], "tem": [0, -1]},
+    "gully":            {"level": -1, "mp": [1, 1, "P", "P"], "tem": ["OT", "OT"]},
+    "ip_fp":            {"level": "OT", "mp": ["OT", "OT", "OT", "OT"], "tem": [-2, -2]},
+    "_footnotes": {
+      "1": "TEMs are not cumulative; only the one most beneficial to the defender is used.",
+      "2": "Terrain in bold black = blocking hexes; bold red = blocking terrain features.",
+      "3": "MP cost per bold contour line crossed when maneuvering uphill; not applicable along a road.",
+      "4": "Left TEM is small arms, right TEM is mortar.",
+      "5": "Palm groves/orchard/brush block LOS of units on different levels; hindrance on the same level [4.2.4].",
+      "6": "1 1/2 to enter and All to maneuver from one river/marsh hex to another.",
+      "7": "Use other terrain in the hex if entered from a non-road/non-railroad hex.",
+      "8": "+1 for each tree line crossed or when exiting a forest road hex into any hex without a connecting road [4.1.9.1a]."
+    }
+  },
+  "blind_hex": {
+    "_rule": "4.2.3",
+    "_doc": "rows = level difference 1..5; columns = hexes from the highest hex to the intervening terrain 1..20. 0* means 1 when the adjacent hex contains a forest hex or intersects a building or tree-line feature.",
+    "1": ["0*", 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10],
+    "2": ["0*", 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7],
+    "3": [0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5],
+    "4": [0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4],
+    "5": [0, 0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3]
+  },
+  "stacking": {
+    "_rule": "2.3, 14.0",
+    "per_player_per_hex": {"squads": 3, "mg": 2, "towed_gun": 1, "fp": 1, "vehicles": 2, "leaders_ft_latw": "any two"},
+    "per_player_in_assault": {"non_vehicular_combat_steps": 4, "vehicle": 1, "leader": 1, "ft_or_latw": 1}
+  },
+  "maneuver_allowance": {
+    "_rule": "10.1",
+    "non_vehicular": {"activation": [3, 2], "reaction": [2, 1], "_doc": "[MP, minimum hexes regardless of cost]"},
+    "track_halftrack": {"activation": 5, "reaction": 4, "reverse": 3},
+    "wheel": {"activation": 6, "reaction": 4, "reverse": 3}
+  },
+  "recovery": {
+    "_rule": "12.1",
+    "recover_if": "modified roll <= cohesion",
+    "rally_if": "modified roll <= 1",
+    "heroism_if": "unmodified 10",
+    "drm": {"elite": -1, "leader": -1, "suppressed": 1, "japanese_russian": 1}
+  },
+  "shock_recovery": {
+    "_rule": "12.7",
+    "rows": [[1, 1, "rally"], [2, 4, "recover"], [5, 7, "remains shocked"], [8, 10, "knocked out and abandoned (destroyed)"]]
+  },
+  "tactical_objective_pp": {
+    "_rule": "22.2.1 (optional, out of scope)",
+    "rows": [["improved position", 1, 1], ["fortified position", 4, 1], ["hill", 2, 1], ["towed gun", 1, 1], ["successful vehicle destruction attempt", 2, 1], ["MOP", 1, 1]],
+    "mission_win": 1,
+    "per_step_lost": -1
+  },
+  "casualty_track": {
+    "_rule": "20.4, 21.2",
+    "_doc": "box -> casualty points; attacker side boxes 1..8 add CP to elapsed time (black), defender side boxes 1..8 subtract (red). Russian/Japanese: 1 CP per box.",
+    "attacker": {"1": 4, "2": 6, "3": 9, "4": 12, "5": 15, "6": 18, "7": 21, "8": 24},
+    "defender": {"1": -4, "2": -6, "3": -9, "4": -12, "5": -15, "6": -18, "7": -21, "8": -24}
+  },
+  "time_lapse": {
+    "_rule": "5.0 VI",
+    "rows": [[1, 2, 2], [3, 5, 3], [6, 8, 4], [9, 10, 5]]
+  },
+  "coordination": {
+    "_rule": "7.1",
+    "success_if_at_least": 8
+  },
+  "random_events": {
+    "_rule": "18.0",
+    "recon_on_unmodified_initiative": 1,
+    "fate_on_unmodified_initiative": 10,
+    "fate": [
+      {"min": 1, "max": 2, "result": "medic"},
+      {"min": 3, "max": 5, "max_vs_ru_jp": 4, "result": "recover"},
+      {"min": 6, "max": 7, "min_vs_ru_jp": 5, "result": "sniper"},
+      {"min": 8, "max": 9, "result": "indecision"},
+      {"min": 10, "max": 10, "result": "panic"}
+    ],
+    "_fate_texts": {
+      "medic": "A prior casualty returns: randomly select and return a single MG or infantry section from a platoon that suffered a casualty, adjust the casualty track; placed concealed if in cover terrain, with or as close as possible to a unit of the same platoon (any platoon if MG) and not adjacent to an enemy unit. If no prior casualty, all units in a single hex recover instead; if no non-vehicular units in play, recover one AFV selected at random.",
+      "recover": "Recover all disrupted, regrouping and shocked units in any single hex.",
+      "sniper": "One randomly selected non-hidden platoon leader suffers a casualty; if none in play, one randomly selected AFV is shocked.",
+      "indecision": "Loss of initiative to the opposing player (reroll if both players are indecisive).",
+      "panic": "As the sole action this turn, all units in a single hex selected by the opposing player move four hexes toward, but no further than, their FBE (NA to towed guns or fortified positions)."
+    }
+  }
+}

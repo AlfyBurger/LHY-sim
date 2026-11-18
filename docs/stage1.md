@@ -17,11 +17,20 @@ User rulings > Errata (15 Oct 2026) > Living Rules v4.4 and Living Combat Tables
 
 ## Rulings
 
-(none yet)
+- R1 (user, 2026-11-18): Volume I is the **original 2019 printing**. Apply the errata entries for the original module (Mission 2 sector, sector 9 hex B11 building absent, Mission 8 objective wording as printed for the original sector 11). Map images from Vassal/GMT are presumed reprint: check sectors 9 and 11 against photos of the user's maps.
+- R2 (user): Terrain read from images is checked by the user on colour overlays, sector by sector.
+- R3 (user): The engine implements the rules Volume I missions use first; the skill's rules text covers all series rules.
 
 ## Open questions
 
-(none yet)
+Each with Claude's current reading (not settled).
+
+- Q1 Mortar Fire Action Table: 76–82mm section MDRM count "3" is printed in red (red = negative on LHY charts). Reading: 3 markers, red is a highlight of a changed value.
+- Q2 AVM table: LATW/FT vs FP, towed gun, urban building or urban road is printed "1/2". Reading: +1 for one of LATW/FT, +2 if both? or +1 LATW / +2 FT? To settle from rules 14.2e and the playbook.
+- Q3 Terrain table: rural/urban, wheeled vehicles "2/1". Reading: 2 MP rural, 1 MP urban.
+- Q4 Playbook examples use terms and numbers older than v4.4 ("Encirclement" marker = Envelopment; "Obscure Target" DRM, no longer on the charts; 11.4.8g, 13.6.3.1b). Reading: follow v4.4 rules and charts; use the examples only where they agree.
+- Q5 Game Track is v5.1.2023 while rules are v4.4 (2026): check the Clean-Up Phase step order and the Fate table against the rules.
+- Q6 Sector 11 terrain questions: see data/sectors/11.json "open_questions".
 
 ## Process log
 

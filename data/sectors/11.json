@@ -1,0 +1,53 @@
+{
+  "sector": "11",
+  "printing": "image: GMT Vol. 1 Hidden Setup (presumed reprint) — check against user's original 2019 map",
+  "status": "draft, read by Claude 2026-11-18, not yet reviewed",
+  "orientation": "row 1 north; columns A..K west to east; A and K are half hexes; B13, D13, F13, H13, J13 are half hexes",
+  "default": {"terrain": "open", "level": 0},
+  "scatter": {"hex": "B12", "directions": {"1": "N", "2": "NE", "3": "SE", "4": "S", "5": "SW", "6": "NW"}},
+  "hexes": {
+    "B5":  {"terrain": "woods"},
+    "C6":  {"terrain": "heavy_woods"},
+    "C7":  {"terrain": "heavy_woods"},
+    "D6":  {"terrain": "woods"},
+    "E9":  {"terrain": "heavy_woods"},
+    "F9":  {"terrain": "heavy_woods", "note": "woods cover the east half; centre at the edge"},
+    "G9":  {"terrain": "heavy_woods"},
+    "G10": {"terrain": "heavy_woods"},
+    "H9":  {"terrain": "woods"},
+    "H2":  {"terrain": "woods"},
+    "H3":  {"terrain": "heavy_woods"},
+    "I3":  {"terrain": "heavy_woods"},
+    "J1":  {"terrain": "woods"},
+    "B10": {"terrain": "woods"},
+    "B11": {"terrain": "woods"},
+    "C11": {"terrain": "woods"},
+    "H12": {"terrain": "woods"},
+    "I13": {"terrain": "woods"},
+    "E4":  {"building": "stone", "note": "church (Mission 1 objective)"},
+    "G3":  {"building": "wooden", "hut": true},
+    "F5":  {"building": "wooden", "hut": true},
+    "F6":  {"building": "wooden"},
+    "H5":  {"building": "wooden", "hut": true},
+    "H6":  {"building": "wooden"},
+    "J4":  {"building": "wooden", "hut": true},
+    "J6":  {"building": "wooden"},
+    "E11": {"building": "wooden", "hut": true},
+    "J10": {"building": "wooden", "hut": true}
+  },
+  "roads": [
+    ["F1", "F2", "F3", "G4", "G5", "G6", "G7"],
+    ["A7", "B7", "C8", "D8", "E8", "F7", "G7", "H7", "I8", "J7", "K7"],
+    ["D8", "D9", "E10", "F10", "F11", "F12", "F13"]
+  ],
+  "walls": [["D4", "E5"], ["D5", "E5"], ["D5", "E6"], ["J5", "K5"], ["J5", "K6"]],
+  "tree_lines": [],
+  "hills": [],
+  "open_questions": [
+    "D4/E4 hexside: a strip of bushes runs along it next to the church — inconsequential vegetation or a tree line?",
+    "Partial woods: A11, B6, B12, D5, D7, F9, H13 have woods touching part of the hex; only hexes whose centre lies in woods are marked.",
+    "Striped crop fields (E6-E7, G1-G2, H4, I4-I6, H10-H11, I10-I11, J11) read as open terrain (fields).",
+    "No contour lines seen: whole sector at ground level.",
+    "Printing: errata says sector 11 differs between the original Vol. I and the reprint (Mission 8 building points 13)."
+  ]
+}
