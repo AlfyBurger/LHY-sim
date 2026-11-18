@@ -1,6 +1,6 @@
 {
   "sector": "11",
-  "printing": "image: GMT Vol. 1 Hidden Setup (presumed reprint) — check against user's original 2019 map",
+  "printing": "original 2019 (GMT Vol. 1 Hidden Setup image)",
   "status": "draft, read by Claude 2026-11-18, not yet reviewed",
   "orientation": "row 1 north; columns A..K west to east; A and K are half hexes; B13, D13, F13, H13, J13 are half hexes",
   "default": {"terrain": "open", "level": 0},
