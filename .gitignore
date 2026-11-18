@@ -1,0 +1,6 @@
+*.vmod
+*.pdf
+art/
+sources/
+__pycache__/
+*.pyc
