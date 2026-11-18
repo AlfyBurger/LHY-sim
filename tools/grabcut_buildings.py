@@ -20,8 +20,14 @@ def refine(img, box, pad=45):
 if __name__ == '__main__':
     img = cv2.imread(sys.argv[1]); seeds = json.load(open(sys.argv[2])); out = []
     for s in seeds:
-        p = refine(img, s["box"])
-        if p: out.append({"hex": s["hex"], "poly": p})
+        p = refine(img, s["box"]); x0, y0, x1, y1 = s["box"]
+        box_area = (x1 - x0) * (y1 - y0)
+        if not p or cv2.contourArea(np.array(p, np.int32)) < 0.4 * box_area:
+            # GrabCut failed (low contrast): fall back to the seed box, flagged
+            p = [[x0, y0], [x1, y0], [x1, y1], [x0, y1]]
+            out.append({"hex": s["hex"], "poly": p, "fallback_box": True})
+        else:
+            out.append({"hex": s["hex"], "poly": p})
     json.dump(out, open(sys.argv[3], "w"))
     if len(sys.argv) > 4:
         vis = img.copy(); tiles = []
