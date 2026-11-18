@@ -2,7 +2,7 @@
 usage: sector_overlay.py <sector.json> <image> <out.jpg>"""
 import sys, os, json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from hexgrid import center, COLS, neighbours
+from hexgrid import center, COLS, all_hexes, neighbours
 from PIL import Image, ImageDraw, ImageFont
 R, H = 220, 392
 FILL = {"woods": (60, 200, 60, 90), "heavy_woods": (0, 90, 0, 120), "orchard": (180, 230, 0, 90),
@@ -38,9 +38,9 @@ def main(js, img, out):
         g.line(side(a, b), fill=(255, 0, 0, 255), width=22)
     for a, b in d.get("tree_lines", []):
         g.line(side(a, b), fill=(0, 255, 0, 255), width=22)
-    for L in COLS:
-        for r in range(1, 14):
-            x, y = center(f"{L}{r}"); v = verts(x, y)
+    for hid in all_hexes():
+        if True:
+            x, y = center(hid); L, r = hid[0], int(hid[1:]); v = verts(x, y)
             g.line(v + [v[0]], fill=(0, 90, 255, 200), width=4)
     out_im = Image.alpha_composite(im, ov).convert('RGB')
     out_im.save(out, quality=82)

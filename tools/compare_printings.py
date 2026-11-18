@@ -2,15 +2,15 @@
 usage: compare_printings.py <sector> <out.jpg> [rows a-b]"""
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from hexgrid import center, COLS
+from hexgrid import center, COLS, all_hexes
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 R, H = 220, 392
 f = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 64)
 def grid(im):
     d = ImageDraw.Draw(im)
-    for L in COLS:
-        for r in range(1, 14):
-            x, y = center(f"{L}{r}")
+    for hid in all_hexes():
+        if True:
+            x, y = center(hid); L, r = hid[0], int(hid[1:])
             v = [(x+R, y), (x+R/2, y+H/2), (x-R/2, y+H/2), (x-R, y), (x-R/2, y-H/2), (x+R/2, y-H/2)]
             d.line(v + [v[0]], fill=(0, 90, 255), width=5)
             d.text((x, y+70), f"{L}{r}", fill=(255, 0, 0), font=f, anchor='mm', stroke_width=3, stroke_fill='white')

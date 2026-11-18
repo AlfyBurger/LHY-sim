@@ -1,8 +1,8 @@
 {
  "sector": "11",
  "printing": "reprint (Vassal 5.0.2 Sector_11_v2)",
- "status": "draft, derived from the original reading plus differences seen side by side; not yet reviewed",
- "orientation": "row 1 north; columns A..K west to east; A and K are half hexes; B13, D13, F13, H13, J13 are half hexes",
+ "status": "reviewed by user 2026-11-18 (first pass); corrections applied",
+ "orientation": "row 1 north; columns A..K west to east; half hexes count as full hexes: A and K columns, B0/D0/F0/H0/J0 on the north edge, B13/D13/F13/H13/J13 on the south edge",
  "default": {
   "terrain": "open",
   "level": 0
@@ -45,7 +45,7 @@
    "terrain": "heavy_woods"
   },
   "H9": {
-   "terrain": "woods"
+   "terrain": "heavy_woods"
   },
   "H2": {
    "terrain": "woods"
@@ -129,10 +129,20 @@
   "B1": {
    "building": "wooden",
    "note": "dashed circle printed around hex B1 (meaning unknown)"
+  },
+  "B0": {
+   "terrain": "woods"
+  },
+  "J0": {
+   "terrain": "heavy_woods"
+  },
+  "J13": {
+   "terrain": "woods"
   }
  },
  "roads": [
   [
+   "F0",
    "F1",
    "F2",
    "F3",
@@ -205,8 +215,6 @@
  "hills": [],
  "open_questions": [
   "Reprint additions vs original: building B1 (with a dashed circle drawn around B1), woods at edge half hexes A3, A11, B13, K3, K11, road stubs A2-B1, K2-J2-J3-J4, J10-J11-K12, and a road stub at the west edge near A12.",
-  "J13: woods touch the hex from I13 \u2014 read as open.",
-  "Woods types copied from the original reading; check the reprint art (e.g. B5, H2, J1 lighter; C6, C7, E9, G9, G10, H3, I3 darker).",
   "D4/E4 hexside strip of bushes, as in the original: inconsequential vegetation or tree line?"
  ],
  "buildings": [

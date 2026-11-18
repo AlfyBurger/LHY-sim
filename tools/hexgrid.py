@@ -13,13 +13,14 @@ def center(hexid: str):
     y0 = Y0_ODD if c % 2 == 0 else Y0_EVEN
     return (c * DX, y0 + (r - 1) * DY)
 
-def all_hexes(rows=13):
+def all_hexes():
+    """Every hex with any part on the sector, half hexes included (they count as full hexes):
+    odd columns rows 1..13, even columns rows 0..13 (row 0 = half hexes on the north edge)."""
     out = []
     for c, L in enumerate(COLS):
-        maxr = rows
-        for r in range(1, maxr + 1):
+        for r in range(0, 14):
             x, y = center(f"{L}{r}")
-            if y <= 5100 + 1:
+            if -10 <= y <= 5110:
                 out.append(f"{L}{r}")
     return out
 
@@ -28,7 +29,7 @@ def neighbours(hexid: str):
     c = COLS.index(hexid[0]); r = int(hexid[1:])
     odd = (c % 2 == 0)  # columns A, C, ... sit higher
     def h(cc, rr):
-        return f"{COLS[cc]}{rr}" if 0 <= cc < len(COLS) and rr >= 1 else None
+        return f"{COLS[cc]}{rr}" if 0 <= cc < len(COLS) and rr >= 0 and -10 <= center(f"{COLS[cc]}{rr}")[1] <= 5110 else None
     if odd:
         return [h(c, r-1), h(c+1, r-1), h(c+1, r), h(c, r+1), h(c-1, r), h(c-1, r-1)]
     return [h(c, r-1), h(c+1, r), h(c+1, r+1), h(c, r+1), h(c-1, r+1), h(c-1, r)]

@@ -6,7 +6,7 @@ pixels by colour, and returns simplified polygons in image pixel coordinates.
 usage: trace_buildings.py <sector.json> <image> <out.json> [preview.jpg]"""
 import sys, os, json, cv2, numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from hexgrid import center, COLS
+from hexgrid import center, COLS, all_hexes
 R, HH = 220, 392
 
 def hexpoly(x, y, k=1.0):
@@ -21,9 +21,9 @@ def mask_pixels(img):
     dark = (V < 125) & ~((H >= 26) & (H <= 95) & (S > 40))     # shadowed roofs, not dark foliage
     m = (roof | stone | hut | dark).astype(np.uint8) * 255
     # remove printed labels, centre dots and vertex marks
-    for L in COLS:
-        for r in range(1, 14):
-            x, y = center(f"{L}{r}")
+    for hid in all_hexes():
+        if True:
+            x, y = center(hid); L, r = hid[0], int(hid[1:])
             cv2.rectangle(m, (int(x-120), int(y-205)), (int(x+120), int(y-95)), 0, -1)
             cv2.circle(m, (int(x), int(y)), 14, 0, -1)
             for vx, vy in hexpoly(x, y):

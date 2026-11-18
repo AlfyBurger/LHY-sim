@@ -1,8 +1,8 @@
 {
  "sector": "11",
  "printing": "original 2019 (GMT Vol. 1 Hidden Setup image)",
- "status": "draft, read by Claude 2026-11-18, not yet reviewed",
- "orientation": "row 1 north; columns A..K west to east; A and K are half hexes; B13, D13, F13, H13, J13 are half hexes",
+ "status": "reviewed by user 2026-11-18 (first pass); corrections applied",
+ "orientation": "row 1 north; columns A..K west to east; half hexes count as full hexes: A and K columns, B0/D0/F0/H0/J0 on the north edge, B13/D13/F13/H13/J13 on the south edge",
  "default": {
   "terrain": "open",
   "level": 0
@@ -45,7 +45,7 @@
    "terrain": "heavy_woods"
   },
   "H9": {
-   "terrain": "woods"
+   "terrain": "heavy_woods"
   },
   "H2": {
    "terrain": "woods"
@@ -114,6 +114,7 @@
  },
  "roads": [
   [
+   "F0",
    "F1",
    "F2",
    "F3",

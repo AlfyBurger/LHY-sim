@@ -21,6 +21,9 @@ User rulings > Errata (15 Oct 2026) > Living Rules v4.4 and Living Combat Tables
 - R2 (user): Terrain read from images is checked by the user on colour overlays, sector by sector.
 - R4 (user): Line of sight by shape: building footprints and contour lines are traced from the map images and LOS is computed geometrically; lines passing within a small tolerance of a shape are flagged for a ruling. Forest (hex-based, 4.2.1a) and walls/tree lines (hexsides) stay hex-based.
 - R5 (user): Both printings are encoded: original (user's copy; provisional until checked against the physical maps) and reprint (Vassal 5.0.2, GMT Basic Training 2023). Order: sectors as missions use them (11, 10, 4, 9, 12, 2, 7, 5, 1, 8, 6, 3).
+- R6 (user): Half hexes on sector edges are full hexes, including row 0 on the north edge of the even columns (B0, D0, F0, H0, J0).
+- R7 (user): Woods type is decided by colour only: dark green = heavy woods, light green = woods, regardless of how dense the trees are drawn.
+- R8 (user, sector 11 review): reprint J13 counts as woods although the woods only partly cover it (criterion for partial woods to be confirmed).
 - F1 (finding, 2026-11-18): GMT's "Vol. 1 Hidden Setup" sector images are the ORIGINAL printing (sector 9 hex B11 has no building). The Vassal module 5.0.2 sector images are the REPRINT (B11 building present). Corrected after aligning both on one grid: sector 11 differs only in additions (building B1, edge woods, road stubs); sector 2 differs substantially (reprint adds three roads, buildings, marsh). A January 2019 playbook diagram of sector 5 matches the original (no western road branch).
 - R3 (user): The engine implements the rules Volume I missions use first; the skill's rules text covers all series rules.
 

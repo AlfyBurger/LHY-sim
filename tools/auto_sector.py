@@ -7,16 +7,14 @@ visual checking; borderline hexes are listed under "flags".
 usage: auto_sector.py <image> <sector-id> <printing> <out.json>"""
 import sys, os, json, cv2, numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from hexgrid import center, COLS, neighbours
+from hexgrid import center, COLS, all_hexes, neighbours
 
 R, HH = 220, 392
 
 def hexes():
-    for L in COLS:
-        for r in range(1, 14):
-            h = f"{L}{r}"; x, y = center(h)
-            if y <= 5100:
-                yield h, x, y
+    for h in all_hexes():
+        x, y = center(h)
+        yield h, x, y
 
 def patch(hsv, x, y, r):
     x0, y0 = int(max(0, x - r)), int(max(0, y - r))
@@ -58,7 +56,6 @@ def main(image, sid, printing, out):
         for n in neighbours(h):
             if not n or n < h: continue
             nx, ny = center(n)
-            if ny > 5100: continue
             mx, my = (x + nx) / 2, (y + ny) / 2
             sub = rm[int(my - 28):int(my + 28), int(mx - 28):int(mx + 28)]
             if sub.size and sub.mean() > 0.30:

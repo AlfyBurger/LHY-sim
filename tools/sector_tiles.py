@@ -2,7 +2,7 @@
 usage: sector_tiles.py <image> <outdir>"""
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from hexgrid import center, COLS
+from hexgrid import center, COLS, all_hexes
 from PIL import Image, ImageDraw, ImageFont
 R, H = 220, 392
 def verts(x, y):
@@ -12,9 +12,9 @@ def main(img, out):
     src = Image.open(img).convert('RGB')
     d = ImageDraw.Draw(src)
     f = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 70)
-    for L in COLS:
-        for r in range(1, 14):
-            x, y = center(f"{L}{r}")
+    for hid in all_hexes():
+        if True:
+            x, y = center(hid); L, r = hid[0], int(hid[1:])
             v = verts(x, y); d.line(v + [v[0]], fill=(0, 90, 255), width=4)
             d.text((x, y + 60), f"{L}{r}", fill=(255, 0, 0), font=f, anchor='mm', stroke_width=3, stroke_fill=(255, 255, 255))
     src.save(os.path.join(out, 'overlay.jpg'), quality=85)
