@@ -1,0 +1,272 @@
+{
+ "sector": "10",
+ "printing": "original 2019 (GMT Vol. 1 Hidden Setup image)",
+ "status": "draft, not yet reviewed",
+ "orientation": "row 1 north; columns A..K west to east; half hexes count as full hexes",
+ "default": {
+  "terrain": "open",
+  "level": 0
+ },
+ "scatter": {
+  "hex": "B12"
+ },
+ "hexes": {
+  "B2": {
+   "terrain": "woods"
+  },
+  "D2": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "H2": {
+   "terrain": "woods"
+  },
+  "I2": {
+   "terrain": "woods"
+  },
+  "B3": {
+   "terrain": "woods"
+  },
+  "D3": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "E3": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "G3": {
+   "terrain": "woods"
+  },
+  "G4": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "I4": {
+   "terrain": "woods"
+  },
+  "B5": {
+   "terrain": "woods"
+  },
+  "C5": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "D5": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "E5": {
+   "terrain": "woods"
+  },
+  "H5": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "C6": {
+   "terrain": "woods"
+  },
+  "D6": {
+   "terrain": "woods"
+  },
+  "E6": {
+   "terrain": "woods"
+  },
+  "J6": {
+   "terrain": "woods"
+  },
+  "C7": {
+   "terrain": "woods"
+  },
+  "D7": {
+   "terrain": "woods"
+  },
+  "E7": {
+   "terrain": "woods"
+  },
+  "G7": {
+   "terrain": "woods"
+  },
+  "H7": {
+   "terrain": "woods"
+  },
+  "D8": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "B9": {
+   "terrain": "woods"
+  },
+  "C9": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "E9": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "F9": {
+   "terrain": "woods"
+  },
+  "H9": {
+   "terrain": "woods"
+  },
+  "D10": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "E10": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "F10": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "H10": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "I10": {
+   "terrain": "woods"
+  },
+  "B11": {
+   "terrain": "woods"
+  },
+  "E11": {
+   "terrain": "woods",
+   "level": 2
+  },
+  "F11": {
+   "terrain": "woods",
+   "level": 2
+  },
+  "H11": {
+   "terrain": "woods",
+   "level": 2
+  },
+  "C12": {
+   "terrain": "woods"
+  },
+  "E12": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "I12": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "E4": {
+   "terrain": "heavy_woods",
+   "level": 1
+  },
+  "F3": {
+   "terrain": "heavy_woods",
+   "forest_road": true
+  },
+  "F4": {
+   "terrain": "heavy_woods",
+   "forest_road": true
+  },
+  "F5": {
+   "terrain": "heavy_woods",
+   "forest_road": true
+  },
+  "F6": {
+   "terrain": "heavy_woods",
+   "forest_road": true
+  },
+  "G6": {
+   "terrain": "heavy_woods"
+  },
+  "I5": {
+   "terrain": "heavy_woods",
+   "level": 1
+  },
+  "I7": {
+   "terrain": "heavy_woods"
+  },
+  "F8": {
+   "terrain": "heavy_woods",
+   "forest_road": true
+  },
+  "G8": {
+   "terrain": "heavy_woods"
+  },
+  "H8": {
+   "terrain": "heavy_woods"
+  },
+  "I8": {
+   "terrain": "heavy_woods"
+  },
+  "D9": {
+   "terrain": "heavy_woods",
+   "level": 2
+  },
+  "C2": {
+   "level": 1
+  },
+  "D4": {
+   "level": 1
+  },
+  "H4": {
+   "level": 1
+  },
+  "G5": {
+   "level": 1
+  },
+  "I6": {
+   "level": 1
+  },
+  "C10": {
+   "level": 1
+  },
+  "D11": {
+   "level": 1
+  },
+  "G11": {
+   "level": 1
+  },
+  "G12": {
+   "level": 1
+  },
+  "I11": {
+   "level": 1
+  },
+  "H12": {
+   "level": 1
+  }
+ },
+ "roads": [
+  [
+   "F0",
+   "F1",
+   "F2",
+   "F3",
+   "F4",
+   "F5",
+   "F6",
+   "F7",
+   "F8",
+   "G9",
+   "G10",
+   "G11",
+   "G12",
+   "F12",
+   "F13"
+  ]
+ ],
+ "walls": [],
+ "tree_lines": [],
+ "buildings": [],
+ "open_questions": [
+  "Thin contour lines (gradual slopes, 4.1.4a) not yet encoded per hex: second pass.",
+  "Hill hexes read from the bold contours: C2 D2 D3 E3 E4 D4 C5 D5 (west), G4 H4 G5 H5 I5 I6 (east), level-2 tops D9, E11-F11, H11; close calls C5, E10, H10, D11.",
+  "Road F2-F8 runs through woods: F3-F6 and F8 treated as forest road hexes (4.1.9.1), terrain of the woods on both sides; F2 woods only on one side, read as open road.",
+  "Road leaves G12 to F12/F13 crossing between hexes: read as G11-G12-F12-F13.",
+  "Pale winding tracks (north across B1-E2, down the west hill C2-D4, across the south hill D10-F11) read as cosmetic, not paths (4.1.9.6).",
+  "Original has no buildings and no side roads in this sector.",
+  "No woods reach into the edge half hexes in the original (B0, J0, A3, K3, A11, K11, B13, J13 are open).",
+  "Washed image: heavy woods judged by the darker blue-grey tone: E4, F3-F6, G6, I5, I7, F8, G8, H8, I8, D9; check I5 and G6."
+ ]
+}

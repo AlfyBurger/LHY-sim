@@ -27,7 +27,8 @@ def main(js, img, out):
         if h.get("building"):
             g.rectangle((x-70, y-70, x+70, y+70), outline=BLD[h["building"]] + (255,), width=14)
         if h.get("hut"): g.ellipse((x+60, y-110, x+120, y-50), fill=(255, 220, 0, 230))
-        if "level" in h and h["level"]: g.text((x, y-120), f"L{h['level']}", fill=(255, 0, 255, 255), font=f, anchor='mm')
+        if "level" in h and h["level"]:
+            g.text((x, y-120), f"L{h['level']}", fill=(255, 255, 255, 255), font=f, anchor='mm', stroke_width=6, stroke_fill=(150, 0, 150, 255))
     for road in d.get("roads", []):
         g.line([center(h) for h in road], fill=(255, 140, 0, 220), width=18)
     for e in d.get("roads_edges", []):
