@@ -32,3 +32,23 @@ def neighbours(hexid: str):
     if odd:
         return [h(c, r-1), h(c+1, r-1), h(c+1, r), h(c, r+1), h(c-1, r), h(c-1, r-1)]
     return [h(c, r-1), h(c+1, r), h(c+1, r+1), h(c, r+1), h(c-1, r+1), h(c-1, r)]
+
+# ---- Image frames -------------------------------------------------------------
+# Canonical coordinates = GMT hidden-setup pixels (portrait, 3300x5100, row 1 north).
+# Vassal 5.0.2 sector images (reprint art) are landscape 2952x1968 with north on the LEFT
+# and column A at the BOTTOM:  vx = y * 227.1/392,  vy = 1968 - x * 196.44/330.
+VASSAL_SX, VASSAL_SY, VASSAL_H = 227.1 / 392.0, 196.44 / 330.0, 1968.0
+
+def to_frame(x, y, frame="gmt"):
+    if frame == "gmt":
+        return (x, y)
+    if frame == "vassal":
+        return (y * VASSAL_SX, VASSAL_H - x * VASSAL_SY)
+    raise ValueError(frame)
+
+def from_frame(px, py, frame="gmt"):
+    if frame == "gmt":
+        return (px, py)
+    if frame == "vassal":
+        return ((VASSAL_H - py) / VASSAL_SY, px / VASSAL_SX)
+    raise ValueError(frame)

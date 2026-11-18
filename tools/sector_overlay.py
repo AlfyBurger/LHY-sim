@@ -30,6 +30,10 @@ def main(js, img, out):
         if "level" in h and h["level"]: g.text((x, y-120), f"L{h['level']}", fill=(255, 0, 255, 255), font=f, anchor='mm')
     for road in d.get("roads", []):
         g.line([center(h) for h in road], fill=(255, 140, 0, 220), width=18)
+    for e in d.get("roads_edges", []):
+        g.line([center(e[0]), center(e[1])], fill=(255, 140, 0, 220), width=18)
+    for b in d.get("buildings", []):
+        g.polygon([tuple(pt) for pt in b["poly"]], outline=(255, 0, 255, 255), width=8)
     for a, b in d.get("walls", []):
         g.line(side(a, b), fill=(255, 0, 0, 255), width=22)
     for a, b in d.get("tree_lines", []):

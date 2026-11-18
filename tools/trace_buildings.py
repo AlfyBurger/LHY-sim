@@ -30,9 +30,12 @@ def mask_pixels(img):
                 cv2.circle(m, (int(vx), int(vy)), 30, 0, -1)
     return m
 
-def trace(sector_json, image):
-    d = json.load(open(sector_json)); img = cv2.imread(image); m = mask_pixels(img)
+def trace(sector_json, image, whole=False):
+    d = json.load(open(sector_json)) if sector_json != "-" else {"hexes": {}}
+    img = cv2.imread(image); m = mask_pixels(img)
     region = np.zeros(m.shape, np.uint8)
+    if whole:
+        region[:] = 255
     for hid, h in d["hexes"].items():
         if h.get("building") or h.get("hut"):
             cv2.fillPoly(region, [hexpoly(*center(hid), 1.15)], 255)
@@ -44,17 +47,23 @@ def trace(sector_json, image):
     for c in cs:
         a = cv2.contourArea(c)
         if a < 900: continue
+        if whole:
+            hull = cv2.convexHull(c); solidity = a / max(1.0, cv2.contourArea(hull))
+            (_, _), (rw, rh), _ = cv2.minAreaRect(c); rect_fill = a / max(1.0, rw * rh)
+            if a < 2000 or solidity < 0.80 or rect_fill < 0.55: continue
         p = cv2.approxPolyDP(c, 6, True).reshape(-1, 2).tolist()
         polys.append({"area": int(a), "poly": p})
     return img, polys
 
 def preview(img, polys, sector_json, out):
-    d = json.load(open(sector_json)); vis = img.copy(); tiles = []
+    d = json.load(open(sector_json)) if sector_json != "-" else {"hexes": {}}; vis = img.copy(); tiles = []
     for p in polys:
         cv2.polylines(vis, [np.array(p["poly"], np.int32)], True, (255, 0, 255), 5)
-    for hid, h in d["hexes"].items():
-        if h.get("building") or h.get("hut"):
-            x, y = center(hid); x0, y0 = max(0, int(x-260)), max(0, int(y-260))
+    spots = [(hid, center(hid)) for hid, h in d["hexes"].items() if h.get("building") or h.get("hut")] if d["hexes"] else \
+            [(f"#{i}", tuple(np.mean(p["poly"], 0))) for i, p in enumerate(polys)]
+    for hid, (x, y) in spots:
+        if True:
+            x0, y0 = max(0, int(x-260)), max(0, int(y-260))
             t = vis[y0:y0+520, x0:x0+520].copy()
             t = cv2.copyMakeBorder(t, 0, 520-t.shape[0], 0, 520-t.shape[1], cv2.BORDER_CONSTANT)
             cv2.putText(t, hid, (10, 40), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (0, 0, 255), 4)
@@ -64,7 +73,10 @@ def preview(img, polys, sector_json, out):
     cv2.imwrite(out, np.vstack(rows))
 
 if __name__ == '__main__':
-    img, polys = trace(sys.argv[1], sys.argv[2])
+    whole = "--whole" in sys.argv
+    args = [a for a in sys.argv[1:] if a != "--whole"]
+    sys.argv = [sys.argv[0]] + args
+    img, polys = trace(sys.argv[1], sys.argv[2], whole)
     json.dump(polys, open(sys.argv[3], 'w'))
     if len(sys.argv) > 4: preview(img, polys, sys.argv[1], sys.argv[4])
     print(len(polys), "polygons")
