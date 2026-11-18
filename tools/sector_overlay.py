@@ -41,6 +41,9 @@ def main(js, img, out):
         return out
     for road in d.get("roads", []):
         g.line(pts(road), fill=(255, 140, 0, 220), width=18)
+        for h in road:
+            if not h.startswith("@"):
+                x, y = center(h); g.ellipse((x-30, y-30, x+30, y+30), fill=(255, 140, 0, 230))
     for e in d.get("roads_edges", []):
         g.line([center(e[0]), center(e[1])], fill=(255, 140, 0, 220), width=18)
     for b in d.get("buildings", []):
