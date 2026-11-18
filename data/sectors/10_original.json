@@ -1,7 +1,7 @@
 {
  "sector": "10",
  "printing": "original 2019 (GMT Vol. 1 Hidden Setup image)",
- "status": "draft, not yet reviewed",
+ "status": "paused (R10): to be redone from the user's scans of his physical maps",
  "orientation": "row 1 north; columns A..K west to east; half hexes count as full hexes",
  "default": {
   "terrain": "open",
