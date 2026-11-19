@@ -35,7 +35,7 @@
   "F3": {
    "terrain": "woods",
    "contour": 2,
-   "contour_max": 4
+   "contour_max": 3
   },
   "G3": {
    "terrain": "woods",
@@ -45,7 +45,7 @@
   "E4": {
    "terrain": "woods",
    "contour": 2,
-   "contour_max": 4
+   "contour_max": 3
   },
   "E5": {
    "terrain": "woods",
@@ -54,13 +54,13 @@
   },
   "F6": {
    "terrain": "woods",
-   "contour": 1,
+   "contour": 0,
    "contour_max": 4
   },
   "G7": {
    "terrain": "woods",
    "contour": 1,
-   "contour_max": 3
+   "contour_max": 2
   },
   "H6": {
    "terrain": "woods",
@@ -172,8 +172,8 @@
    "contour_max": 1
   },
   "H3": {
-   "contour": 3,
-   "contour_max": 4
+   "contour": 1,
+   "contour_max": 2
   }
  },
  "roads": [
@@ -276,8 +276,6 @@
    ]
   }
  ],
- "open_questions": [
-  "Contour close calls: F6 and G7 (outermost line passes at the dot: 0/1 and 1/2), H3 (2 or 3), F3 and E4 (2, the third line runs just inside the dot)."
- ],
- "contour_scheme": "contour = number of contour lines (thin or bold) enclosing the centre dot; contour_max = highest contour reaching into any part of the hex. Hill G5: 3 thin, bold '1' (=4), 3 thin, bold '2' (=8), 1 thin (=9). Hexes not listed: 0/0."
+ "open_questions": [],
+ "contour_scheme": "contour = number of contour lines (thin or bold) enclosing the centre dot; contour_max = highest contour reaching into any part of the hex. Hill G5: 3 thin, bold '1' (=4), 3 thin, bold '2' (=8), 1 thin (=9). Hexes not listed: 0/0. User review 2026-11-19: F6 0, G7 1/2, H3 1/2, F3 2/3, E4 2/3."
 }
