@@ -1,7 +1,7 @@
 {
  "sector": "10",
  "printing": "reprint (Vassal 5.0.2 Sector_10_v2)",
- "status": "user review applied; K12 edge road confirmed",
+ "status": "reviewed and confirmed by user 2026-11-19",
  "orientation": "row 1 north; columns A..K west to east; half hexes count as full hexes",
  "default": {
   "terrain": "open",
