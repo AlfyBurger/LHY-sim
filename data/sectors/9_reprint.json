@@ -1,7 +1,7 @@
 {
  "sector": "9",
  "printing": "reprint (Vassal 5.0.2 Sector_9_v3)",
- "status": "draft, not yet reviewed",
+ "status": "user review 1 applied (J8-J12 not a road)",
  "orientation": "row 1 north; columns A..K west to east; half hexes count as full hexes",
  "default": {
   "terrain": "open",
@@ -186,18 +186,12 @@
    "@E"
   ],
   [
-   "J7",
-   "J8",
-   "J9",
-   "J10",
-   "J11",
-   "J12",
-   "K12",
-   "@E"
-  ],
-  [
    "@W",
    "A12"
+  ],
+  [
+   "K12",
+   "@E"
   ]
  ],
  "walls": [],
@@ -593,6 +587,7 @@
   "Building B11 hex: the reprint building the errata mention for Mission 4 MOP is in B11 (sector 9). Errata: excluded from Mission 4 MOP.",
   "Farm C8/D8: the large barn straddles the C8/D8 hexside (assigned to C8). A row of tiny sheds south of D8 (around D8/D9) is not counted as buildings.",
   "Road junctions: north road branches east at F0 (F0-G1); west road joins the main road at F7 via E8; main road bends F9-G10-G11-F11.",
-  "Woods mixing light and dark (D4, C5, D10): judged by the colour at the centre dot."
+  "Woods mixing light and dark (D4, C5, D10): judged by the colour at the centre dot.",
+  "K12: the faint J-column mark (decorative per user) ends at the east edge in K12; kept as an edge road stub per R11 pending confirmation."
  ]
 }
