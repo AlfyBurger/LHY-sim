@@ -137,11 +137,11 @@
   },
   "E3": {
    "contour": 0,
-   "contour_max": 2
+   "contour_max": 1
   },
   "I3": {
    "contour": 0,
-   "contour_max": 1
+   "contour_max": 0
   },
   "D4": {
    "contour": 0,
@@ -149,7 +149,7 @@
   },
   "I4": {
    "contour": 0,
-   "contour_max": 4
+   "contour_max": 2
   },
   "D5": {
    "contour": 0,
@@ -161,11 +161,11 @@
   },
   "E6": {
    "contour": 0,
-   "contour_max": 4
+   "contour_max": 2
   },
   "I6": {
    "contour": 0,
-   "contour_max": 4
+   "contour_max": 1
   },
   "H7": {
    "contour": 0,
