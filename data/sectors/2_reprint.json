@@ -1,0 +1,392 @@
+{
+ "sector": "2",
+ "printing": "reprint (Vassal 5.0.2 Sector_2_v2)",
+ "status": "draft, not yet reviewed",
+ "orientation": "row 1 north; columns A..K west to east; half hexes count as full hexes",
+ "default": {
+  "terrain": "open",
+  "level": 0
+ },
+ "scatter": {
+  "hex": "B12"
+ },
+ "hexes": {
+  "B0": {
+   "terrain": "woods"
+  },
+  "J0": {
+   "terrain": "woods"
+  },
+  "A3": {
+   "terrain": "woods"
+  },
+  "K3": {
+   "terrain": "woods"
+  },
+  "E2": {
+   "terrain": "woods"
+  },
+  "F1": {
+   "terrain": "woods"
+  },
+  "F2": {
+   "terrain": "woods"
+  },
+  "J2": {
+   "terrain": "woods"
+  },
+  "E5": {
+   "terrain": "woods"
+  },
+  "E6": {
+   "terrain": "woods"
+  },
+  "F5": {
+   "terrain": "woods"
+  },
+  "B8": {
+   "terrain": "woods"
+  },
+  "B9": {
+   "terrain": "woods"
+  },
+  "C8": {
+   "terrain": "woods"
+  },
+  "H10": {
+   "terrain": "woods"
+  },
+  "J11": {
+   "terrain": "woods"
+  },
+  "J12": {
+   "terrain": "woods"
+  },
+  "I12": {
+   "terrain": "woods"
+  },
+  "E12": {
+   "terrain": "woods"
+  },
+  "F12": {
+   "terrain": "woods"
+  },
+  "A11": {
+   "terrain": "woods"
+  },
+  "K11": {
+   "terrain": "woods"
+  },
+  "B13": {
+   "terrain": "woods"
+  },
+  "J13": {
+   "terrain": "woods"
+  },
+  "H2": {
+   "terrain": "heavy_woods"
+  },
+  "H3": {
+   "terrain": "heavy_woods"
+  },
+  "I4": {
+   "terrain": "heavy_woods"
+  },
+  "C9": {
+   "terrain": "heavy_woods"
+  },
+  "C10": {
+   "terrain": "heavy_woods"
+  },
+  "G11": {
+   "terrain": "heavy_woods"
+  },
+  "F11": {
+   "terrain": "heavy_woods"
+  },
+  "B1": {
+   "terrain": "marsh"
+  },
+  "C1": {
+   "terrain": "marsh"
+  },
+  "B3": {
+   "building": "wooden"
+  },
+  "I1": {
+   "building": "wooden",
+   "hut": true
+  },
+  "E11": {
+   "building": "wooden"
+  }
+ },
+ "roads": [
+  [
+   "@W",
+   "A2",
+   "B2",
+   "C2",
+   "D1",
+   "E1",
+   "F0",
+   "G1",
+   "H1",
+   "I1",
+   "J1",
+   "K2",
+   "@E"
+  ],
+  [
+   "B2",
+   "B3",
+   "B4",
+   "B5",
+   "B6",
+   "A7",
+   "@W"
+  ],
+  [
+   "@W",
+   "A12",
+   "B11",
+   "C12",
+   "D11",
+   "E11",
+   "F10",
+   "G10",
+   "H9",
+   "I10",
+   "J10",
+   "K11"
+  ],
+  [
+   "J10",
+   "I11",
+   "H11",
+   "G12",
+   "G13",
+   "F13",
+   "@S"
+  ],
+  [
+   "@E",
+   "K7",
+   "K8",
+   "K9",
+   "K10",
+   "K11",
+   "K12",
+   "@E"
+  ]
+ ],
+ "walls": [],
+ "tree_lines": [],
+ "buildings": [
+  {
+   "hex": "B3",
+   "kind": "wooden",
+   "poly": [
+    [
+     237,
+     1040
+    ],
+    [
+     240,
+     1132
+    ],
+    [
+     250,
+     1142
+    ],
+    [
+     308,
+     1138
+    ],
+    [
+     309,
+     1041
+    ]
+   ]
+  },
+  {
+   "hex": "B3",
+   "kind": "wooden",
+   "poly": [
+    [
+     460,
+     1073
+    ],
+    [
+     449,
+     1073
+    ],
+    [
+     418,
+     1099
+    ],
+    [
+     443,
+     1150
+    ],
+    [
+     418,
+     1184
+    ],
+    [
+     442,
+     1223
+    ],
+    [
+     455,
+     1223
+    ],
+    [
+     519,
+     1182
+    ],
+    [
+     494,
+     1123
+    ]
+   ]
+  },
+  {
+   "hex": "B3",
+   "kind": "wooden",
+   "poly": [
+    [
+     377,
+     1226
+    ],
+    [
+     378,
+     1280
+    ],
+    [
+     417,
+     1280
+    ],
+    [
+     414,
+     1228
+    ]
+   ]
+  },
+  {
+   "hex": "I1",
+   "kind": "wooden",
+   "poly": [
+    [
+     2630,
+     170
+    ],
+    [
+     2765,
+     170
+    ],
+    [
+     2765,
+     315
+    ],
+    [
+     2630,
+     315
+    ]
+   ],
+   "fallback_box": true
+  },
+  {
+   "hex": "I1",
+   "kind": "hut",
+   "poly": [
+    [
+     2550,
+     263
+    ],
+    [
+     2610,
+     263
+    ],
+    [
+     2610,
+     303
+    ],
+    [
+     2550,
+     303
+    ]
+   ],
+   "fallback_box": true
+  },
+  {
+   "hex": "E11",
+   "kind": "wooden",
+   "poly": [
+    [
+     1426,
+     4103
+    ],
+    [
+     1415,
+     4182
+    ],
+    [
+     1464,
+     4190
+    ],
+    [
+     1474,
+     4174
+    ],
+    [
+     1483,
+     4114
+    ]
+   ]
+  },
+  {
+   "hex": "E11",
+   "kind": "wooden",
+   "poly": [
+    [
+     1362,
+     4219
+    ],
+    [
+     1343,
+     4239
+    ],
+    [
+     1361,
+     4274
+    ],
+    [
+     1376,
+     4279
+    ],
+    [
+     1398,
+     4266
+    ],
+    [
+     1399,
+     4257
+    ],
+    [
+     1379,
+     4219
+    ]
+   ]
+  }
+ ],
+ "open_questions": [
+  "No contour lines: whole sector at ground level.",
+  "Marsh: B1 and C1 (dark water with vegetation islands). Marsh with forest depictions: marsh only, or marsh + woods?",
+  "Heavy woods: H2, H3, I4, C9, C10, F11, G11; all other woods light. C8/B8/B9 sit next to the dark C9 core: read as light by the colour at the dot.",
+  "North road A2-B2-C2-D1-E1-F0-G1-H1-I1-J1-K2: does it touch F0 (north edge half hex) without leaving the map there?",
+  "East edge road K7-K12 runs along the edge, entering and leaving east; the J10 road joins it at K11.",
+  "South road junction at J10: branch J10-I11-H11-G12-G13-F13 leaves the south edge at F13.",
+  "Buildings: B3 (3 wooden), I1 (wooden + hut), E11 (2 wooden)."
+ ]
+}
