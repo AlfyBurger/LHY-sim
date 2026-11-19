@@ -1,0 +1,398 @@
+{
+ "sector": "5",
+ "printing": "reprint (Vassal 5.0.2 Sector_5_v2)",
+ "status": "draft, not yet reviewed",
+ "orientation": "row 1 north; columns A..K west to east; half hexes count as full hexes",
+ "default": {
+  "terrain": "open",
+  "level": 0
+ },
+ "scatter": {
+  "hex": "B12"
+ },
+ "hexes": {
+  "B0": {
+   "terrain": "woods"
+  },
+  "C1": {
+   "terrain": "woods"
+  },
+  "D1": {
+   "terrain": "woods"
+  },
+  "A3": {
+   "terrain": "woods"
+  },
+  "B3": {
+   "terrain": "woods"
+  },
+  "C4": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "C5": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "E4": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "I3": {
+   "terrain": "woods"
+  },
+  "J0": {
+   "terrain": "woods"
+  },
+  "K3": {
+   "terrain": "woods"
+  },
+  "G10": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "G11": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "H9": {
+   "terrain": "woods"
+  },
+  "H11": {
+   "terrain": "woods",
+   "level": 1
+  },
+  "A11": {
+   "terrain": "woods"
+  },
+  "K11": {
+   "terrain": "woods"
+  },
+  "B13": {
+   "terrain": "woods"
+  },
+  "J13": {
+   "terrain": "woods"
+  },
+  "D9": {
+   "terrain": "heavy_woods"
+  },
+  "C10": {
+   "terrain": "heavy_woods"
+  },
+  "D10": {
+   "terrain": "heavy_woods"
+  },
+  "D3": {
+   "level": 1
+  },
+  "D4": {
+   "level": 1
+  },
+  "F10": {
+   "level": 1
+  },
+  "F11": {
+   "level": 1
+  },
+  "G12": {
+   "level": 1
+  },
+  "H10": {
+   "level": 1
+  },
+  "I11": {
+   "level": 1
+  },
+  "J1": {
+   "terrain": "pond",
+   "note": "small pond; no LHY terrain type \u2014 see open question"
+  },
+  "J6": {
+   "building": "wooden",
+   "hut": true
+  },
+  "I7": {
+   "building": "wooden",
+   "hut": true
+  }
+ },
+ "roads": [
+  [
+   "@N",
+   "F0",
+   "F1",
+   "F2",
+   "F3",
+   "F4",
+   "F5",
+   "E6",
+   "E7",
+   "E8",
+   "E9",
+   "E10",
+   "E11",
+   "E12",
+   "F12",
+   "F13",
+   "@S"
+  ],
+  [
+   "@W",
+   "A7",
+   "B7",
+   "C8",
+   "D7",
+   "E7"
+  ]
+ ],
+ "walls": [
+  [
+   "F5",
+   "G6"
+  ],
+  [
+   "F6",
+   "G6"
+  ],
+  [
+   "F6",
+   "G7"
+  ],
+  [
+   "F7",
+   "G7"
+  ],
+  [
+   "G5",
+   "G6"
+  ],
+  [
+   "G5",
+   "H5"
+  ],
+  [
+   "H4",
+   "H5"
+  ],
+  [
+   "H5",
+   "I5"
+  ],
+  [
+   "I5",
+   "J5"
+  ],
+  [
+   "J4",
+   "J5"
+  ],
+  [
+   "J5",
+   "K5"
+  ],
+  [
+   "G8",
+   "H7"
+  ],
+  [
+   "H7",
+   "H8"
+  ],
+  [
+   "H8",
+   "I8"
+  ],
+  [
+   "I8",
+   "J8"
+  ],
+  [
+   "I8",
+   "I9"
+  ],
+  [
+   "J7",
+   "J8"
+  ],
+  [
+   "J7",
+   "K8"
+  ]
+ ],
+ "tree_lines": [],
+ "buildings": [
+  {
+   "hex": "J6",
+   "kind": "wooden",
+   "poly": [
+    [
+     2873,
+     2230
+    ],
+    [
+     2831,
+     2305
+    ],
+    [
+     2831,
+     2323
+    ],
+    [
+     2849,
+     2335
+    ],
+    [
+     2860,
+     2329
+    ],
+    [
+     2874,
+     2336
+    ],
+    [
+     2903,
+     2333
+    ],
+    [
+     2924,
+     2295
+    ],
+    [
+     2921,
+     2256
+    ]
+   ]
+  },
+  {
+   "hex": "J6",
+   "kind": "hut",
+   "poly": [
+    [
+     3071,
+     2199
+    ],
+    [
+     3024,
+     2199
+    ],
+    [
+     3024,
+     2218
+    ],
+    [
+     3070,
+     2216
+    ]
+   ]
+  },
+  {
+   "hex": "J6",
+   "kind": "wooden",
+   "poly": [
+    [
+     2885,
+     2412
+    ],
+    [
+     2847,
+     2448
+    ],
+    [
+     2847,
+     2456
+    ],
+    [
+     2904,
+     2521
+    ],
+    [
+     2917,
+     2521
+    ],
+    [
+     2956,
+     2482
+    ],
+    [
+     2956,
+     2468
+    ],
+    [
+     2906,
+     2412
+    ]
+   ]
+  },
+  {
+   "hex": "I7",
+   "kind": "hut",
+   "poly": [
+    [
+     2575,
+     2481
+    ],
+    [
+     2550,
+     2475
+    ],
+    [
+     2523,
+     2482
+    ],
+    [
+     2529,
+     2556
+    ],
+    [
+     2580,
+     2550
+    ]
+   ]
+  },
+  {
+   "hex": "I7",
+   "kind": "wooden",
+   "poly": [
+    [
+     2663,
+     2514
+    ],
+    [
+     2661,
+     2580
+    ],
+    [
+     2623,
+     2585
+    ],
+    [
+     2622,
+     2637
+    ],
+    [
+     2713,
+     2640
+    ],
+    [
+     2714,
+     2521
+    ],
+    [
+     2703,
+     2514
+    ]
+   ]
+  }
+ ],
+ "open_questions": [
+  "J1 pond: the rules have no pond or lake terrain. Treat as open ground, as marsh, or impassable?",
+  "Walls (stone, on hexsides): three wall lines traced \u2014 F7/G7 up to H5/I5 (8 hexsides), I5/J5 to J5/K5 around J5 (3), G8/H7 to J7/K8 around H8-I8 (7).",
+  "West hill level 1: C4, C5, D3, D4, E4 (close call D5, read outside). East hill level 1: F10, F11, G10, G11, G12, H10, H11, I11 (close calls F10, F11, G12; I10, H9, F9 read outside).",
+  "Woods: heavy = D9, C10, D10; all others light.",
+  "Edge stubs A2, A12 (west) and K2, K12 (east) fade into pale tracks: read as decorative, like sector 9 A12.",
+  "Pale tracks (A2-B2-C3 across the west hill, F7-G8-F9 curve, H11-I12 on the east hill) read as decorative.",
+  "Buildings: J6 (house, hut, barn), I7 (hut, barn). The thin green hedges around I7 read as inconsequential vegetation (4.1a), not tree lines.",
+  "Thin contours not yet encoded (second pass)."
+ ]
+}
