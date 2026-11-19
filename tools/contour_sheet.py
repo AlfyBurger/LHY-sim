@@ -13,7 +13,10 @@ s = Image.new('RGB', (cols * (T + 6), rows * (T + 6)), 'black')
 for i, h in enumerate(hexes):
     x, y = center(h); t = im.crop((int(x - r), int(y - r), int(x + r), int(y + r)))
     d = ImageDraw.Draw(t)
-    d.line((r - 18, r, r + 18, r), fill=(255, 0, 0), width=4); d.line((r, r - 18, r, r + 18), fill=(255, 0, 0), width=4)
+    R, HH = 220, 392
+    v = [(r + R, r), (r + R / 2, r + HH / 2), (r - R / 2, r + HH / 2), (r - R, r), (r - R / 2, r - HH / 2), (r + R / 2, r - HH / 2)]
+    d.line(v + [v[0]], fill=(255, 0, 0), width=3)
+    d.ellipse((r - 9, r - 9, r + 9, r + 9), outline=(255, 0, 0), width=3)
     d.text((6, 4), h, fill=(255, 0, 0), font=f, stroke_width=3, stroke_fill='white')
     s.paste(t, ((i % cols) * (T + 6), (i // cols) * (T + 6)))
 s.save(sys.argv[3], quality=88)
