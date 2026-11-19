@@ -1,7 +1,7 @@
 {
  "sector": "7",
  "printing": "reprint (Vassal 5.0.2 Sector_7_v2)",
- "status": "draft, not yet reviewed",
+ "status": "reviewed and confirmed by user 2026-11-19",
  "orientation": "row 1 north; columns A..K west to east; half hexes count as full hexes",
  "default": {
   "terrain": "open",
@@ -197,11 +197,6 @@
   }
  ],
  "open_questions": [
-  "Hill: level 1 = F4, F5, G4, H4, H5, G6; level 2 top = G5. Close calls: F5 and G6 (bold line near the dot); F6, H6, G3, H3 read outside (thin lines only).",
-  "Woods: all light except D11 (heavy). Edge half hexes with woods: A3, A11, B0, B13, J0, J13, K3, K11.",
-  "Road A12-B11-B10 ends at the house in B10; the pale continuation north (B9-B8-B7) read as decorative.",
-  "Pale tracks H2-I3-I4-I5 and the faint diagonal I9-H10 read as decorative.",
-  "Thin contours not yet encoded (second pass).",
-  "North road confirmed by user: F0-G1-H1-I2-I1-J1, then K2 to the east edge (K2 kept; to confirm)."
+  "Thin contours not yet encoded (second pass)."
  ]
 }
