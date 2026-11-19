@@ -29,6 +29,7 @@ User rulings > Errata (15 Oct 2026) > Living Rules v4.4 and Living Combat Tables
 - R11 (user, sector 10 review): A road stub reaching the sector edge is a road hex leading off the map (it joins the next sector); in data, an off-map end is written "@W", "@E", "@N" or "@S". A pale track that fades out inside the map is decorative, not terrain (e.g. sector 10 J12).
 - R12 (user, sector 12): River hexes are level -1 (terrain table), one below the surrounding ground.
 - R13 (user, sectors 9, 12): A road hex needs the road to pass through it clearly; a track merely passing near the centre dot (sector 9 B6) or a fading stub (sector 9 A12) is not road. A hill hex needs its centre dot inside a bold contour; thin contours don't count (sector 12 J7).
+- R14 (user, sector 12): A white hex centre dot marks a river hex. Terracotta/red roofs are wooden buildings (a shade of brown). The bold contour along river banks bounds the river valley.
 - F1 (finding, 2026-11-18): GMT's "Vol. 1 Hidden Setup" sector images are the ORIGINAL printing (sector 9 hex B11 has no building). The Vassal module 5.0.2 sector images are the REPRINT (B11 building present). Corrected after aligning both on one grid: sector 11 differs only in additions (building B1, edge woods, road stubs); sector 2 differs substantially (reprint adds three roads, buildings, marsh). A January 2019 playbook diagram of sector 5 matches the original (no western road branch).
 - R3 (user): The engine implements the rules Volume I missions use first; the skill's rules text covers all series rules.
 
