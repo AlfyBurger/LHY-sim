@@ -18,14 +18,20 @@
    "terrain": "woods"
   },
   "B2": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 0,
+   "contour_max": 2
   },
   "D2": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 7,
+   "contour_max": 7
   },
   "H2": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 0,
+   "contour_max": 1
   },
   "I2": {
    "terrain": "woods"
@@ -34,78 +40,116 @@
    "terrain": "woods"
   },
   "B3": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 0,
+   "contour_max": 1
   },
   "D3": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 6,
+   "contour_max": 7
   },
   "E3": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 7,
+   "contour_max": 7
   },
   "G3": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 1,
+   "contour_max": 4
   },
   "K3": {
    "terrain": "woods"
   },
   "G4": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 6,
+   "contour_max": 6
   },
   "I4": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 1,
+   "contour_max": 4
   },
   "B5": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 0,
+   "contour_max": 2
   },
   "C5": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 4,
+   "contour_max": 6
   },
   "D5": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 7,
+   "contour_max": 7
   },
   "E5": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 2,
+   "contour_max": 4
   },
   "H5": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 4,
+   "contour_max": 7
   },
   "I5": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 7,
+   "contour_max": 7
   },
   "C6": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 2,
+   "contour_max": 5
   },
   "D6": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 1,
+   "contour_max": 4
   },
   "E6": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 1,
+   "contour_max": 3
   },
   "F6": {
    "terrain": "heavy_woods",
    "forest_road": true
   },
   "G6": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 1,
+   "contour_max": 3
   },
   "J6": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 2,
+   "contour_max": 4
   },
   "C7": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 0,
+   "contour_max": 1
   },
   "D7": {
    "terrain": "woods"
   },
   "E7": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 0,
+   "contour_max": 1
   },
   "G7": {
    "terrain": "woods"
@@ -193,22 +237,32 @@
   },
   "E4": {
    "terrain": "heavy_woods",
-   "level": 1
+   "level": 1,
+   "contour": 4,
+   "contour_max": 6
   },
   "F3": {
    "terrain": "heavy_woods",
-   "forest_road": true
+   "forest_road": true,
+   "contour": 3,
+   "contour_max": 4
   },
   "F4": {
    "terrain": "heavy_woods",
-   "forest_road": true
+   "forest_road": true,
+   "contour": 1,
+   "contour_max": 3
   },
   "F5": {
    "terrain": "heavy_woods",
-   "forest_road": true
+   "forest_road": true,
+   "contour": 1,
+   "contour_max": 2
   },
   "I7": {
-   "terrain": "heavy_woods"
+   "terrain": "heavy_woods",
+   "contour": 1,
+   "contour_max": 3
   },
   "F8": {
    "terrain": "heavy_woods",
@@ -231,25 +285,37 @@
    "building": "wooden"
   },
   "K2": {
-   "building": "wooden"
+   "building": "wooden",
+   "contour": 0,
+   "contour_max": 1
   },
   "J12": {
    "building": "wooden"
   },
   "C2": {
-   "level": 1
+   "level": 1,
+   "contour": 4,
+   "contour_max": 5
   },
   "D4": {
-   "level": 1
+   "level": 1,
+   "contour": 6,
+   "contour_max": 7
   },
   "H4": {
-   "level": 1
+   "level": 1,
+   "contour": 5,
+   "contour_max": 7
   },
   "G5": {
-   "level": 1
+   "level": 1,
+   "contour": 5,
+   "contour_max": 7
   },
   "I6": {
-   "level": 1
+   "level": 1,
+   "contour": 5,
+   "contour_max": 7
   },
   "C10": {
    "level": 1
@@ -273,7 +339,69 @@
   },
   "F2": {
    "terrain": "woods",
-   "forest_road": true
+   "forest_road": true,
+   "contour": 1,
+   "contour_max": 4
+  },
+  "B1": {
+   "contour": 1,
+   "contour_max": 2
+  },
+  "B4": {
+   "contour": 1,
+   "contour_max": 2
+  },
+  "C1": {
+   "contour": 1,
+   "contour_max": 2
+  },
+  "C3": {
+   "contour": 2,
+   "contour_max": 5
+  },
+  "C4": {
+   "contour": 2,
+   "contour_max": 5
+  },
+  "D0": {
+   "contour": 0,
+   "contour_max": 1
+  },
+  "D1": {
+   "contour": 3,
+   "contour_max": 5
+  },
+  "E1": {
+   "contour": 0,
+   "contour_max": 1
+  },
+  "E2": {
+   "contour": 2,
+   "contour_max": 6
+  },
+  "H3": {
+   "contour": 1,
+   "contour_max": 4
+  },
+  "H6": {
+   "contour": 1,
+   "contour_max": 4
+  },
+  "J4": {
+   "contour": 1,
+   "contour_max": 4
+  },
+  "J5": {
+   "contour": 2,
+   "contour_max": 6
+  },
+  "K5": {
+   "contour": 0,
+   "contour_max": 1
+  },
+  "K6": {
+   "contour": 0,
+   "contour_max": 1
   }
  },
  "roads": [
@@ -481,6 +609,7 @@
   "Road leaves G12 to F12/F13 crossing between hexes: read as G11-G12-F12-F13.",
   "Pale winding tracks (north across B1-E2, down the west hill C2-D4, across the south hill D10-F11) read as cosmetic, not paths (4.1.9.6).",
   "Woods type by colour (R7): heavy = E4, F3, F4, F5, F8, D9, G8, H8, I7, I8; check G6, F6 and H9.",
-  "G11 (level 1) corrected to woods with the road through it (R15)."
+  "G11 (level 1) corrected to woods with the road through it (R15).",
+  "Contours: north half (rows 0-7, west and east hills) drafted from traced lines; south hill (rows 7-13) pending - lines bunch along the woods flanks and the automatic count undercounts there."
  ]
 }
