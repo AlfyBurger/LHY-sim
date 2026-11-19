@@ -103,6 +103,7 @@
    "G1",
    "H1",
    "I2",
+   "I1",
    "J1",
    "K2",
    "@E"
@@ -198,9 +199,9 @@
  "open_questions": [
   "Hill: level 1 = F4, F5, G4, H4, H5, G6; level 2 top = G5. Close calls: F5 and G6 (bold line near the dot); F6, H6, G3, H3 read outside (thin lines only).",
   "Woods: all light except D11 (heavy). Edge half hexes with woods: A3, A11, B0, B13, J0, J13, K3, K11.",
-  "North road: runs from H1 through the upper part of I2 (along the I1/I2 hexside) to J1 \u2014 read as I2, not I1.",
   "Road A12-B11-B10 ends at the house in B10; the pale continuation north (B9-B8-B7) read as decorative.",
   "Pale tracks H2-I3-I4-I5 and the faint diagonal I9-H10 read as decorative.",
-  "Thin contours not yet encoded (second pass)."
+  "Thin contours not yet encoded (second pass).",
+  "North road confirmed by user: F0-G1-H1-I2-I1-J1, then K2 to the east edge (K2 kept; to confirm)."
  ]
 }
