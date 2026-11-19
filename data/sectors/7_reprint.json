@@ -1,0 +1,206 @@
+{
+ "sector": "7",
+ "printing": "reprint (Vassal 5.0.2 Sector_7_v2)",
+ "status": "draft, not yet reviewed",
+ "orientation": "row 1 north; columns A..K west to east; half hexes count as full hexes",
+ "default": {
+  "terrain": "open",
+  "level": 0
+ },
+ "scatter": {
+  "hex": "B12"
+ },
+ "hexes": {
+  "B0": {
+   "terrain": "woods"
+  },
+  "B1": {
+   "terrain": "woods"
+  },
+  "B2": {
+   "terrain": "woods"
+  },
+  "B3": {
+   "terrain": "woods"
+  },
+  "A3": {
+   "terrain": "woods"
+  },
+  "J0": {
+   "terrain": "woods"
+  },
+  "K3": {
+   "terrain": "woods"
+  },
+  "F3": {
+   "terrain": "woods"
+  },
+  "G3": {
+   "terrain": "woods"
+  },
+  "E4": {
+   "terrain": "woods"
+  },
+  "E5": {
+   "terrain": "woods"
+  },
+  "F6": {
+   "terrain": "woods"
+  },
+  "G7": {
+   "terrain": "woods"
+  },
+  "H6": {
+   "terrain": "woods"
+  },
+  "C11": {
+   "terrain": "woods"
+  },
+  "A11": {
+   "terrain": "woods"
+  },
+  "K11": {
+   "terrain": "woods"
+  },
+  "B13": {
+   "terrain": "woods"
+  },
+  "J13": {
+   "terrain": "woods"
+  },
+  "D11": {
+   "terrain": "heavy_woods"
+  },
+  "F4": {
+   "level": 1
+  },
+  "F5": {
+   "level": 1
+  },
+  "G4": {
+   "level": 1
+  },
+  "H4": {
+   "level": 1
+  },
+  "H5": {
+   "level": 1
+  },
+  "G6": {
+   "level": 1
+  },
+  "G5": {
+   "level": 2
+  },
+  "B10": {
+   "building": "wooden"
+  }
+ },
+ "roads": [
+  [
+   "@N",
+   "F0",
+   "G1",
+   "H1",
+   "I2",
+   "J1",
+   "K2",
+   "@E"
+  ],
+  [
+   "@W",
+   "A7",
+   "B7",
+   "C8",
+   "D8",
+   "E9",
+   "F8",
+   "G9",
+   "H9"
+  ],
+  [
+   "H9",
+   "I9",
+   "J8",
+   "J7",
+   "K7",
+   "@E"
+  ],
+  [
+   "H9",
+   "H10",
+   "H11",
+   "G12",
+   "G13",
+   "F13",
+   "@S"
+  ],
+  [
+   "H11",
+   "I12",
+   "J12",
+   "K12",
+   "@E"
+  ],
+  [
+   "@W",
+   "A12",
+   "B11",
+   "B10"
+  ]
+ ],
+ "walls": [],
+ "tree_lines": [],
+ "buildings": [
+  {
+   "hex": "B10",
+   "kind": "wooden",
+   "poly": [
+    [
+     437,
+     3814
+    ],
+    [
+     406,
+     3838
+    ],
+    [
+     400,
+     3873
+    ],
+    [
+     434,
+     3933
+    ],
+    [
+     445,
+     3935
+    ],
+    [
+     493,
+     3905
+    ],
+    [
+     469,
+     3835
+    ],
+    [
+     457,
+     3832
+    ],
+    [
+     447,
+     3814
+    ]
+   ]
+  }
+ ],
+ "open_questions": [
+  "Hill: level 1 = F4, F5, G4, H4, H5, G6; level 2 top = G5. Close calls: F5 and G6 (bold line near the dot); F6, H6, G3, H3 read outside (thin lines only).",
+  "Woods: all light except D11 (heavy). Edge half hexes with woods: A3, A11, B0, B13, J0, J13, K3, K11.",
+  "North road: runs from H1 through the upper part of I2 (along the I1/I2 hexside) to J1 \u2014 read as I2, not I1.",
+  "Road A12-B11-B10 ends at the house in B10; the pale continuation north (B9-B8-B7) read as decorative.",
+  "Pale tracks H2-I3-I4-I5 and the faint diagonal I9-H10 read as decorative.",
+  "Thin contours not yet encoded (second pass)."
+ ]
+}
