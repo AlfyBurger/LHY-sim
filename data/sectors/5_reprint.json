@@ -105,8 +105,9 @@
    "level": 1
   },
   "J1": {
-   "terrain": "pond",
-   "note": "small pond; no LHY terrain type \u2014 see open question"
+   "terrain": "water",
+   "shoreline": true,
+   "note": "pond with sandy shore (R16)"
   },
   "J6": {
    "building": "wooden",
@@ -386,13 +387,13 @@
   }
  ],
  "open_questions": [
-  "J1 pond: the rules have no pond or lake terrain. Treat as open ground, as marsh, or impassable?",
   "Walls (stone, on hexsides): three wall lines traced \u2014 F7/G7 up to H5/I5 (8 hexsides), I5/J5 to J5/K5 around J5 (3), G8/H7 to J7/K8 around H8-I8 (7).",
   "West hill level 1: C4, C5, D3, D4, E4 (close call D5, read outside). East hill level 1: F10, F11, G10, G11, G12, H10, H11, I11 (close calls F10, F11, G12; I10, H9, F9 read outside).",
   "Woods: heavy = D9, C10, D10; all others light.",
   "Edge stubs A2, A12 (west) and K2, K12 (east) fade into pale tracks: read as decorative, like sector 9 A12.",
   "Pale tracks (A2-B2-C3 across the west hill, F7-G8-F9 curve, H11-I12 on the east hill) read as decorative.",
   "Buildings: J6 (house, hut, barn), I7 (hut, barn). The thin green hedges around I7 read as inconsequential vegetation (4.1a), not tree lines.",
-  "Thin contours not yet encoded (second pass)."
+  "Thin contours not yet encoded (second pass).",
+  "J1 water: infantry movement into the pond still to settle (R16)."
  ]
 }

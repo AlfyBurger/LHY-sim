@@ -6,7 +6,7 @@ from hexgrid import center, COLS, all_hexes, neighbours
 from PIL import Image, ImageDraw, ImageFont
 R, H = 220, 392
 FILL = {"woods": (60, 200, 60, 90), "heavy_woods": (0, 90, 0, 120), "orchard": (180, 230, 0, 90),
-        "brush": (150, 160, 60, 90), "marsh": (0, 150, 200, 90), "river": (0, 60, 255, 110), "pond": (0, 200, 255, 140)}
+        "brush": (150, 160, 60, 90), "marsh": (0, 150, 200, 90), "river": (0, 60, 255, 110), "pond": (0, 200, 255, 140), "water": (0, 200, 255, 140)}
 BLD = {"stone": (90, 90, 90), "wooden": (150, 75, 0), "urban": (60, 60, 60)}
 def verts(x, y):
     return [(x+R, y), (x+R/2, y+H/2), (x-R/2, y+H/2), (x-R, y), (x-R/2, y-H/2), (x+R/2, y-H/2)]
