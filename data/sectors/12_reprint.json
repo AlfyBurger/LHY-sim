@@ -204,7 +204,6 @@
    "level": 1
   },
   "J7": {
-   "level": 1,
    "building": "wooden"
   },
   "E1": {
@@ -1345,7 +1344,7 @@
   "River hexes = hexes with a white centre dot (A13 B12 C12 D8-D11 E4-E8 F3 G4 H3 I3 J1 J2) plus K1 (edge half hex, centre in the river). Is the white dot the map's river marker?",
   "Bridges: G4 (village road) and E7 (west road D6-E7-F7). Ford: D11, where the west road A12-B11-C11 crosses to E12 (the river is lighter there). Is D11 a ford?",
   "The bold contour labelled 0 along both river banks: read as the edge of the river valley; only river hexes (level -1) have their centre dot inside it. E9, E10, E11 (woods on the east bank) have their dots just outside.",
-  "Hills (level 1): C3, C4, D2 (west), B9, B10, H2, I2, I8, I9, J7. Close calls: H2 and I2 (dots right at the bold line), D3 (just outside).",
+  "Hills (level 1): C3, C4, D2 (west), B9, B10, H2, I2, I8, I9 (J7 removed: thin contour, user). Close calls: H2 and I2 (dots right at the bold line), D3 (just outside).",
   "Woods colour: heavy = B2, C3, D2, D3, H1, I1; everything else light. E8 is a river hex with woods on its east part (river hexes with forest are forest for LOS, 4.1.10): read as river only.",
   "Buildings: red/terracotta roofs (G3, G6, G7 x2, J7, J12) read as wooden (rules: stone = grey, wooden = shades of brown). Grey roofs read as stone: church F5, G5 east building, H2 (large + two small sheds).",
   "Road junctions: north road F0-F1-G2-G3 (the road runs along the F2/G2 hexside; G2 chosen); west road A2-B1-C1-D1-E1 joins at F1; road A7-B6-C6-D6 crosses the E7 bridge to F7 and joins the village road at G8; main road bends G12-F12-F13; east road F12-G13-H13-I13-J12-K12.",
