@@ -26,6 +26,9 @@ def main(js, img, out):
         if h.get("terrain") in FILL: g.polygon(verts(x, y), fill=FILL[h["terrain"]])
         if h.get("building"):
             g.rectangle((x-70, y-70, x+70, y+70), outline=BLD[h["building"]] + (255,), width=14)
+        if "contour" in h:
+            t = f"{h['contour']}/{h.get('contour_max', h['contour'])}"
+            g.text((x, y+20), t, fill=(255, 255, 0, 255), font=f, anchor='mm', stroke_width=6, stroke_fill=(0, 0, 0, 255))
         if h.get("bridge"): g.text((x, y+90), "BRIDGE", fill=(255, 255, 255, 255), font=f, anchor='mm', stroke_width=5, stroke_fill=(0, 0, 0, 255))
         if h.get("ford"): g.text((x, y+90), "FORD", fill=(255, 255, 255, 255), font=f, anchor='mm', stroke_width=5, stroke_fill=(0, 0, 0, 255))
         if h.get("hut"): g.ellipse((x+60, y-110, x+120, y-50), fill=(255, 220, 0, 230))
