@@ -259,7 +259,7 @@
    "terrain": "woods",
    "level": 1,
    "contour": 5,
-   "contour_max": 8
+   "contour_max": 7
   },
   "I12": {
    "terrain": "woods",
@@ -473,10 +473,7 @@
    "contour": 0,
    "contour_max": 2
   },
-  "B12": {
-   "contour": 1,
-   "contour_max": 1
-  },
+  "B12": {},
   "C8": {
    "contour": 1,
    "contour_max": 4
@@ -745,6 +742,6 @@
   "Woods type by colour (R7): heavy = E4, F3, F4, F5, F8, D9, G8, H8, I7, I8; check G6, F6 and H9.",
   "G11 (level 1) corrected to woods with the road through it (R15)."
  ],
- "contour_status": "North half (hexes with centre y < 2600: west and east hills, rows 0-7) reviewed and confirmed by user 2026-11-21 (F2 1/4, F3 3/4 saddle, F4 1/3, F5 1/2, C6 2/5 checked). South hill (centre y >= 2600, rows 7-13) written 2026-11-21, awaiting user review; doubtful: I10 (dot on a line), F8 (line touches the dot), B12 (dot under the sector number), C11 max 4 (line runs along the hex edge; else 3), E12 max 8 (bold 2 just grazes the top edge; else 7). Self-checks passed: bold 1 reads 3|4 and bold 2 reads 7|8 all round; every transect steps by one; hill levels agree (level 1 iff dot >= 4, level 2 iff dot >= 8). Summits: D9 8, E11 9, F11 9, H11 10 (thin rings inside bold 2).",
+ "contour_status": "North half (hexes with centre y < 2600: west and east hills, rows 0-7) reviewed and confirmed by user 2026-11-21 (F2 1/4, F3 3/4 saddle, F4 1/3, F5 1/2, C6 2/5 checked). South hill (centre y >= 2600, rows 7-13) reviewed and confirmed by user 2026-11-21 (I10 1/3 line through the dot counted downslope, R18; F8 0/2; B12 0/0 scatter diagram; C11 max 4; E12 max 7 after a junk loop was cut). Bold 1 reads 3|4 and bold 2 7|8 all round; summits D9 8, E11 9, F11 9, H11 10.",
  "contour_scheme": "contour = contour lines (thin or bold) between the centre dot and open ground, counted all the way out even through neighbouring hexes (R17 + clarification); contour_max = highest count inside the hexagon. Bold lines on this sector: bold 1 = 4, bold 2 = 8 (3 thin lines between bolds). Hexes not listed: 0/0."
 }

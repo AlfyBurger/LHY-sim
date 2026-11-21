@@ -89,7 +89,7 @@ Handoff for a new chat continuing the work on **/LHY** (The Last Hundred Yards, 
 | Sector | Terrain (woods, roads, buildings, water, hills) | Contours (dot/max) |
 |---|---|---|
 | 11 | Reviewed by user 18 Nov, corrections applied | Not done |
-| 10 | **Confirmed** 19 Nov | North half **confirmed 21 Nov**; south hill **written 21 Nov, awaiting user review** (5 doubtful hexes, see `contour_status`) |
+| 10 | **Confirmed** 19 Nov | North half **confirmed 21 Nov**; south hill **confirmed 21 Nov** |
 | 4 | Draft, awaiting review | Not done |
 | 9 | User review 2 applied; **K12 edge road stub still to confirm** | Not done |
 | 12 | **Confirmed** 19 Nov (river level −1, bridges, ford) | Not done (river valley counts downward) |
@@ -131,9 +131,9 @@ Order of sectors as the missions use them: 11, 10, 4, 9, 12, 2, 7, 5, 1, 8, 6, 3
 
 **Typical false lines:** road edges, woods shadows, hex-corner marks, the map border. **Typical missed lines:** two lines so close that the tracing merges them.
 
-**Sector 10 south hill (rows 7–13): done 21 Nov, awaiting the user's review.**
+**Sector 10 south hill (rows 7–13): confirmed by the user 21 Nov.**
 - Values written to `data/sectors/10_reprint.json` (south = hexes with centre y >= 2600). Bold 1 reads 3|4 and bold 2 7|8 all round; summits D9 8, E11 9, F11 9, H11 10 (thin rings inside bold 2). Review images `reviews/review_s10_contours_south_1.jpg` and `_2.jpg` (Mac folder).
-- Doubtful hexes sent to the user: I10 (dot on a line, 1/3), F8 (line touches the dot, 0/2), B12 (dot under the sector number, 1/1), C11 max 4 (line along the hex edge; else 3), E12 max 8 (bold 2 grazes the top edge; else 7).
+- User's answers on the doubtful hexes: I10 1/3 (line through the dot counts downslope, ruling R18), F8 0/2, B12 0/0 (scatter diagram: the junk ring round the white "10" and the digits was cut), C11 max 4, E12 max 7 (a junk loop on the hex-corner mark at its top edge was cut).
 - Faults fixed: t3 erased along a hex-corner mark at F12 (waypoints `S_t3_F12hexgap`); t1 merged into bold 1 at the E10 corner (cuts + `raw_polylines.t1_E10bend`) and a false link t2→t1 at (1267–1297, 3733–3745); F11 inner ring opened and bridged to bold 2 (waypoints `S_F11ring_E/W`, veto); junk loops inside the E11 ring (cuts, veto); H11 inner ring's NW arc missing (waypoints `S_H11inner_NW`, cut + veto). The 49 confirmed north values are unchanged.
 - `data/contour_work/10/run.sh` now uses `work/s10/` (resp.npy from line_filter.py, ~12 s; skel.npy from skeleton.npz). `raster_values_all.json` holds the current values; `local_values_south_UNRELIABLE.json` is obsolete.
 - New method tools and lessons: see the end of `tools/contour_pipeline.md` (band adjacency first: `contour_bandadj.py`, `contour_labview.py`; `contour_ridge.py`, `contour_comp.py`, `contour_ray.py`).
@@ -142,7 +142,7 @@ Order of sectors as the missions use them: 11, 10, 4, 9, 12, 2, 7, 5, 1, 8, 6, 3
 
 ## 7. Remaining Stage 1 work (in order)
 
-1. Apply the user's answers on the 5 doubtful sector 10 south hexes; then contours on 11, 4, 9, 12, 2 and 5.
+1. Contours on 11, 4, 9, 12, 2 and 5 (sector 10 is fully done).
 2. User reviews of the sector 4 and 2 drafts; the sector 9 K12 stub.
 3. Read sectors 1, 8, 6 and 3 (terrain, road audit, contours).
 4. Counter data: transcribe every counter, front and back (values differ squad by squad). Sources: Vassal piece images (front/back per unit) and GMT counter-sheet scans.
@@ -156,7 +156,7 @@ Order of sectors as the missions use them: 11, 10, 4, 9, 12, 2, 7, 5, 1, 8, 6, 3
 - `LHY-handoff.md`: this file (also in the repo as `docs/LHY-handoff.md`).
 - `maps_reprint_canonical/1.jpg … 12.jpg`: the Vassal reprint sectors warped into the canonical frame. All tools expect these; copy them to `maps/reprint/` in the new workspace. Keep the map images out of the repo while map work is ongoing (user decision, 21 Nov); they may be added once the maps are finished.
 - `sector_data/`: copies of `data/sectors/*_reprint.json` as of this handoff. The repo is the master copy.
-- `reviews/`: the latest review images per sector. The checked sectors are 7, 10, 11, 12 and 5 (plus the 9 review). Sector 10's contour images are `review_s10_contours_north_*.jpg` (confirmed) and `review_s10_contours_south_*.jpg` (awaiting review).
+- `reviews/`: the latest review images per sector. The checked sectors are 7, 10, 11, 12 and 5 (plus the 9 review). Sector 10's contour images are `review_s10_contours_north_*.jpg` (confirmed) and `review_s10_contours_south_*.jpg` (confirmed).
 
 ## 9. Mistakes to avoid (from this phase)
 
