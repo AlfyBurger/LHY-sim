@@ -27,6 +27,10 @@ for y, x in np.argwhere(nb == 2):
     v = np.array([x - path[-1][1], y - path[-1][0]], float); nv = np.linalg.norm(v)
     E.append((int(x), int(y), v / nv if nv else np.zeros(2), lab[y, x], len(path)))
     WALK.append({(int(c), int(r)) for r, c in path})
+EDGE = int(__import__('os').environ.get('CONTOUR_EDGE', '0'))   # ends this close to the image edge are lines running off the map
+if EDGE:
+    keep = [k for k, e in enumerate(E) if EDGE <= e[0] < W - EDGE and EDGE <= e[1] < H - EDGE]
+    E = [E[k] for k in keep]; WALK = [WALK[k] for k in keep]
 P = np.array([[e[0], e[1]] for e in E], float)
 br = list(man.get('bridges', [])); used = set()
 # (1) near ends

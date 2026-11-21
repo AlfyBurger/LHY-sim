@@ -90,7 +90,7 @@ Handoff for a new chat continuing the work on **/LHY** (The Last Hundred Yards, 
 |---|---|---|
 | 11 | Reviewed by user 18 Nov, corrections applied | **None on the map**: all hexes 0/0 (checked 21 Nov) |
 | 10 | **Confirmed** 19 Nov | North half **confirmed 21 Nov**; south hill **confirmed 21 Nov** |
-| 4 | Draft, awaiting review | Not done |
+| 4 | Draft, awaiting review | **In progress** (21 Nov): see §6 'Sector 4 contours' |
 | 9 | User review 2 applied; **K12 edge road stub still to confirm** | Not done |
 | 12 | **Confirmed** 19 Nov (river level −1, bridges, ford) | Not done (river valley counts downward) |
 | 2 | Draft, awaiting review (east-edge road K7–K12 included; K11 woods with road) | Not done |
@@ -137,6 +137,11 @@ Order of sectors as the missions use them: 11, 10, 4, 9, 12, 2, 7, 5, 1, 8, 6, 3
 - Faults fixed: t3 erased along a hex-corner mark at F12 (waypoints `S_t3_F12hexgap`); t1 merged into bold 1 at the E10 corner (cuts + `raw_polylines.t1_E10bend`) and a false link t2→t1 at (1267–1297, 3733–3745); F11 inner ring opened and bridged to bold 2 (waypoints `S_F11ring_E/W`, veto); junk loops inside the E11 ring (cuts, veto); H11 inner ring's NW arc missing (waypoints `S_H11inner_NW`, cut + veto). The 49 confirmed north values are unchanged.
 - `data/contour_work/10/run.sh` now uses `work/s10/` (resp.npy from line_filter.py, ~12 s; skel.npy from skeleton.npz). `raster_values_all.json` holds the current values; `local_values_south_UNRELIABLE.json` is obsolete.
 - New method tools and lessons: see the end of `tools/contour_pipeline.md` (band adjacency first: `contour_bandadj.py`, `contour_labview.py`; `contour_ridge.py`, `contour_comp.py`, `contour_ray.py`).
+
+**Sector 4 contours (in progress, 21 Nov).** Work files `data/contour_work/4/` (`run.sh`, `manual.json`, `waypoints.json`, `raster_values_wip.json` = current, unreviewed values). Rebuild: `line_filter.py` -> `contour_skeleton.py` -> `contour_border.py` (new: removes the map border, extends lines that run off the map to the edge) -> `run.sh` (contour_close with CONTOUR_EDGE=3).
+- Done: bold height labels bridged (`contour_labelfix.py`), lines hidden under woods or erased along hex-corner marks joined (`contour_gapjoin.py`, `contour_endjoin.py`, each join checked by eye; many automatic proposals were wrong and were rejected), the scatter-diagram digits cut, the three lines converging on the B12 "1"/"2" digits redrawn as separate polylines, the outer south line through the "4" digit, the F11 thin line, the I4 thin line, the H13 line in the woods (L5) and the I12 woods line (A).
+- Check: hill levels from the terrain draft (level 1 iff dot >= 4, level 2 iff dot >= 8). Still disagreeing: J2, D6, J7, the J9/I10/J10 hill (reads 2, should be >= 4), D11/C12 and G12/H12 (bold 2 rings read 4-5, should be 8), F12 (draft says not hill, line through the dot: R18 now counts it on the higher side).
+- 22 loose line ends remain (`contour_ends.py`, MINRUN 60). Same-level band pairs (`contour_bandadj.py`) list the open lines. North hills (NW B1-E2, NE H2-J4, C6/D5, G7/G8/F8) read mostly right; check them with the bold check before review.
 
 **Contours on the other sectors:** run the same pipeline: 11, 4, 9, 12 (the river valley counts down: river level −1), 2, 5, then the new sectors.
 
