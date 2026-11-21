@@ -164,7 +164,7 @@ Order of sectors as the missions use them: 11, 10, 4, 9, 12, 2, 7, 5, 1, 8, 6, 3
 ## 8. The Mac folder /Users/Alfy/Desktop/LHY
 
 - `LHY-handoff.md`: this file (also in the repo as `docs/LHY-handoff.md`).
-- `maps_reprint_canonical/1.jpg … 12.jpg`: the Vassal reprint sectors warped into the canonical frame. All tools expect these; copy them to `maps/reprint/` in the new workspace.
+- `maps_reprint_canonical/1.jpg … 12.jpg`: the Vassal reprint sectors warped into the canonical frame. All tools expect these; copy them to `maps/reprint/` in the new workspace. Keep the map images out of the repo while map work is ongoing (user decision, 21 Nov); they may be added once the maps are finished.
 - `sector_data/`: copies of `data/sectors/*_reprint.json` as of this handoff. The repo is the master copy.
 - `reviews/`: the latest review images per sector. The checked sectors are 7, 10, 11, 12 and 5 (plus the 9 review). Sector 10's north-half contour images are `review_s10_contours_north_*.jpg`.
 
