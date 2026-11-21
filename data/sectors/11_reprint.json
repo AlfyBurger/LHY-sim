@@ -945,5 +945,7 @@
    ]
   }
  ],
- "coords": "buildings: polygons in canonical pixels (GMT hidden-setup frame, 330 px per column, 392 px per row)"
+ "coords": "buildings: polygons in canonical pixels (GMT hidden-setup frame, 330 px per column, 392 px per row)",
+ "contour_status": "No contour lines on this sector (flat ground): every hex reads 0/0. Checked 2026-11-21 by tracing all dark thin lines: only building outlines, the two stone walls (D5-D6, J5-J6), the scatter diagram and the map border were found.",
+ "contour_scheme": "contour = contour lines (thin or bold) between the centre dot and open ground (R17, R18); contour_max = highest count inside the hexagon. Hexes not listed: 0/0."
 }

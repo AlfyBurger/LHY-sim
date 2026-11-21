@@ -88,7 +88,7 @@ Handoff for a new chat continuing the work on **/LHY** (The Last Hundred Yards, 
 
 | Sector | Terrain (woods, roads, buildings, water, hills) | Contours (dot/max) |
 |---|---|---|
-| 11 | Reviewed by user 18 Nov, corrections applied | Not done |
+| 11 | Reviewed by user 18 Nov, corrections applied | **None on the map**: all hexes 0/0 (checked 21 Nov) |
 | 10 | **Confirmed** 19 Nov | North half **confirmed 21 Nov**; south hill **confirmed 21 Nov** |
 | 4 | Draft, awaiting review | Not done |
 | 9 | User review 2 applied; **K12 edge road stub still to confirm** | Not done |
@@ -142,7 +142,7 @@ Order of sectors as the missions use them: 11, 10, 4, 9, 12, 2, 7, 5, 1, 8, 6, 3
 
 ## 7. Remaining Stage 1 work (in order)
 
-1. Contours on 11, 4, 9, 12, 2 and 5 (sector 10 is fully done).
+1. Contours on 4, 9, 12, 2 and 5 (sectors 10 and 11 done; 11 has no contour lines).
 2. User reviews of the sector 4 and 2 drafts; the sector 9 K12 stub.
 3. Read sectors 1, 8, 6 and 3 (terrain, road audit, contours).
 4. Counter data: transcribe every counter, front and back (values differ squad by squad). Sources: Vassal piece images (front/back per unit) and GMT counter-sheet scans.
