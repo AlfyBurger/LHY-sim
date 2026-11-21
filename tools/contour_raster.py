@@ -19,12 +19,18 @@ from skimage.morphology import skeletonize as _skz
 _sk = _skz(B > 0).astype(np.uint8)
 _nb = cv2.filter2D(_sk, -1, np.ones((3, 3), np.float32)) * _sk
 JUNC = cv2.dilate(((_nb >= 4) & (_sk > 0)).astype(np.uint8), cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (25, 25))) > 0
-B = cv2.dilate(B, np.ones((3, 3), np.uint8))
+import os
+THIN = os.environ.get('CONTOUR_THIN', '1') == '1'
+if THIN:
+    B = _sk.copy()
+else:
+    B = cv2.dilate(B, np.ones((3, 3), np.uint8))
 free = (B == 0).astype(np.uint8)
 n, lab, st, _ = cv2.connectedComponentsWithStats(free, connectivity=4)
 # region adjacency across barrier pixels (barrier 3 px wide -> look +-4 px)
 ys, xs = np.nonzero(B & ~JUNC); adj = {}
-for dy, dx in ((-4, 0), (0, -4), (-3, -3), (-3, 3)):
+OFFS = ((-2, 0), (0, -2), (-1, -1), (-1, 1), (-2, -1), (-2, 1), (-1, -2), (-1, 2)) if THIN else ((-4, 0), (0, -4), (-3, -3), (-3, 3))
+for dy, dx in OFFS:
     y1, x1, y2, x2 = ys + dy, xs + dx, ys - dy, xs - dx
     ok = (y1 >= 0) & (y1 < H) & (x1 >= 0) & (x1 < W) & (y2 >= 0) & (y2 < H) & (x2 >= 0) & (x2 < W)
     a = lab[y1[ok], x1[ok]]; b = lab[y2[ok], x2[ok]]

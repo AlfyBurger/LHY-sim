@@ -609,7 +609,8 @@
   "Road leaves G12 to F12/F13 crossing between hexes: read as G11-G12-F12-F13.",
   "Pale winding tracks (north across B1-E2, down the west hill C2-D4, across the south hill D10-F11) read as cosmetic, not paths (4.1.9.6).",
   "Woods type by colour (R7): heavy = E4, F3, F4, F5, F8, D9, G8, H8, I7, I8; check G6, F6 and H9.",
-  "G11 (level 1) corrected to woods with the road through it (R15).",
-  "Contours: north half (rows 0-7, west and east hills) drafted from traced lines; south hill (rows 7-13) pending - lines bunch along the woods flanks and the automatic count undercounts there."
- ]
+  "G11 (level 1) corrected to woods with the road through it (R15)."
+ ],
+ "contour_status": "North half (hexes with centre y < 2600: west and east hills, rows 0-7) reviewed and confirmed by user 2026-11-21 (F2 1/4, F3 3/4 saddle, F4 1/3, F5 1/2, C6 2/5 checked). South hill (rows 7-13) NOT done: no contour values written for it yet.",
+ "contour_scheme": "contour = contour lines (thin or bold) between the centre dot and open ground, counted all the way out even through neighbouring hexes (R17 + clarification); contour_max = highest count inside the hexagon. Bold lines on this sector: bold 1 = 4, bold 2 = 8 (3 thin lines between bolds). Hexes not listed: 0/0."
 }
