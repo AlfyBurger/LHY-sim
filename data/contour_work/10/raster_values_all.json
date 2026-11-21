@@ -140,12 +140,12 @@
 "contour_max": 4
 },
 "C9": {
-"contour": 4,
-"contour_max": 5
+"contour": 5,
+"contour_max": 7
 },
 "C10": {
-"contour": 5,
-"contour_max": 6
+"contour": 6,
+"contour_max": 7
 },
 "C11": {
 "contour": 1,
@@ -192,20 +192,20 @@
 "contour_max": 3
 },
 "D8": {
-"contour": 5,
-"contour_max": 5
+"contour": 6,
+"contour_max": 7
 },
 "D9": {
-"contour": 6,
-"contour_max": 6
+"contour": 8,
+"contour_max": 8
 },
 "D10": {
-"contour": 4,
-"contour_max": 5
+"contour": 5,
+"contour_max": 7
 },
 "D11": {
-"contour": 4,
-"contour_max": 5
+"contour": 5,
+"contour_max": 7
 },
 "D12": {
 "contour": 2,
@@ -245,23 +245,23 @@
 },
 "E8": {
 "contour": 2,
-"contour_max": 5
+"contour_max": 6
 },
 "E9": {
-"contour": 5,
-"contour_max": 5
+"contour": 6,
+"contour_max": 7
 },
 "E10": {
 "contour": 4,
-"contour_max": 5
+"contour_max": 7
 },
 "E11": {
-"contour": 7,
-"contour_max": 8
+"contour": 9,
+"contour_max": 9
 },
 "E12": {
-"contour": 4,
-"contour_max": 6
+"contour": 5,
+"contour_max": 8
 },
 "E13": {
 "contour": 0,
@@ -308,16 +308,16 @@
 "contour_max": 3
 },
 "F10": {
-"contour": 5,
-"contour_max": 5
+"contour": 6,
+"contour_max": 7
 },
 "F11": {
-"contour": 6,
-"contour_max": 6
+"contour": 9,
+"contour_max": 9
 },
 "F12": {
 "contour": 1,
-"contour_max": 5
+"contour_max": 6
 },
 "F13": {
 "contour": 0,
@@ -364,12 +364,12 @@
 "contour_max": 3
 },
 "G11": {
-"contour": 5,
-"contour_max": 6
+"contour": 6,
+"contour_max": 8
 },
 "G12": {
-"contour": 4,
-"contour_max": 6
+"contour": 5,
+"contour_max": 8
 },
 "G13": {
 "contour": 1,
@@ -416,16 +416,16 @@
 "contour_max": 2
 },
 "H10": {
-"contour": 5,
-"contour_max": 7
+"contour": 6,
+"contour_max": 8
 },
 "H11": {
-"contour": 7,
-"contour_max": 7
+"contour": 10,
+"contour_max": 10
 },
 "H12": {
-"contour": 4,
-"contour_max": 5
+"contour": 5,
+"contour_max": 7
 },
 "H13": {
 "contour": 0,
@@ -472,16 +472,16 @@
 "contour_max": 3
 },
 "I11": {
-"contour": 4,
-"contour_max": 6
+"contour": 5,
+"contour_max": 8
 },
 "I12": {
-"contour": 5,
-"contour_max": 6
+"contour": 6,
+"contour_max": 8
 },
 "I13": {
 "contour": 2,
-"contour_max": 4
+"contour_max": 5
 },
 "J0": {
 "contour": 0,

@@ -7,7 +7,7 @@ S = np.load(sys.argv[1]).astype(np.uint8); man = json.load(open(sys.argv[2]))
 for x, y, r in man.get('cuts', []): cv2.circle(S, (int(x), int(y)), int(r), 0, -1)
 for x1, y1, x2, y2 in man.get('bridges', []): cv2.line(S, (int(x1), int(y1)), (int(x2), int(y2)), 1, 1)
 for pl in man.get('polylines', []): cv2.polylines(S, [np.array(pl, np.int32)], False, 1, 1)
-im = cv2.imread('/home/claude/maps/reprint/10.jpg'); H, W = S.shape
+im = cv2.imread(__import__('os').environ.get('MAP', __file__.rsplit('/', 2)[0] + '/maps/reprint/10.jpg')); H, W = S.shape
 tiles = []
 for a in args:
     lab, xy = a.split(':'); x, y = map(int, xy.split(','))

@@ -144,7 +144,9 @@
    "contour_max": 1
   },
   "D7": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 2,
+   "contour_max": 3
   },
   "E7": {
    "terrain": "woods",
@@ -159,43 +161,65 @@
   },
   "D8": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 6,
+   "contour_max": 7
   },
   "B9": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 2,
+   "contour_max": 3
   },
   "C9": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 5,
+   "contour_max": 7
   },
   "E9": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 6,
+   "contour_max": 7
   },
   "F9": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 1,
+   "contour_max": 3
   },
   "H9": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 1,
+   "contour_max": 2
   },
   "D10": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 5,
+   "contour_max": 7
   },
   "E10": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 4,
+   "contour_max": 7
   },
   "F10": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 6,
+   "contour_max": 7
   },
   "H10": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 6,
+   "contour_max": 8
   },
   "I10": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 1,
+   "contour_max": 3
   },
   "A11": {
    "terrain": "woods"
@@ -205,35 +229,51 @@
   },
   "E11": {
    "terrain": "woods",
-   "level": 2
+   "level": 2,
+   "contour": 9,
+   "contour_max": 9
   },
   "F11": {
    "terrain": "woods",
-   "level": 2
+   "level": 2,
+   "contour": 9,
+   "contour_max": 9
   },
   "H11": {
    "terrain": "woods",
-   "level": 2
+   "level": 2,
+   "contour": 10,
+   "contour_max": 10
   },
   "K11": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 0,
+   "contour_max": 1
   },
   "C12": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 0,
+   "contour_max": 2
   },
   "E12": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 5,
+   "contour_max": 8
   },
   "I12": {
    "terrain": "woods",
-   "level": 1
+   "level": 1,
+   "contour": 6,
+   "contour_max": 8
   },
   "B13": {
    "terrain": "woods"
   },
   "J13": {
-   "terrain": "woods"
+   "terrain": "woods",
+   "contour": 0,
+   "contour_max": 1
   },
   "E4": {
    "terrain": "heavy_woods",
@@ -266,7 +306,9 @@
   },
   "F8": {
    "terrain": "heavy_woods",
-   "forest_road": true
+   "forest_road": true,
+   "contour": 0,
+   "contour_max": 2
   },
   "G8": {
    "terrain": "heavy_woods"
@@ -279,7 +321,9 @@
   },
   "D9": {
    "terrain": "heavy_woods",
-   "level": 2
+   "level": 2,
+   "contour": 8,
+   "contour_max": 8
   },
   "B6": {
    "building": "wooden"
@@ -290,7 +334,9 @@
    "contour_max": 1
   },
   "J12": {
-   "building": "wooden"
+   "building": "wooden",
+   "contour": 1,
+   "contour_max": 3
   },
   "C2": {
    "level": 1,
@@ -318,24 +364,36 @@
    "contour_max": 7
   },
   "C10": {
-   "level": 1
+   "level": 1,
+   "contour": 6,
+   "contour_max": 7
   },
   "D11": {
-   "level": 1
+   "level": 1,
+   "contour": 5,
+   "contour_max": 7
   },
   "G11": {
    "level": 1,
    "terrain": "woods",
-   "forest_road": true
+   "forest_road": true,
+   "contour": 6,
+   "contour_max": 8
   },
   "G12": {
-   "level": 1
+   "level": 1,
+   "contour": 5,
+   "contour_max": 8
   },
   "I11": {
-   "level": 1
+   "level": 1,
+   "contour": 5,
+   "contour_max": 8
   },
   "H12": {
-   "level": 1
+   "level": 1,
+   "contour": 5,
+   "contour_max": 7
   },
   "F2": {
    "terrain": "woods",
@@ -402,6 +460,82 @@
   "K6": {
    "contour": 0,
    "contour_max": 1
+  },
+  "B7": {
+   "contour": 0,
+   "contour_max": 1
+  },
+  "B8": {
+   "contour": 1,
+   "contour_max": 3
+  },
+  "B10": {
+   "contour": 0,
+   "contour_max": 2
+  },
+  "B12": {
+   "contour": 1,
+   "contour_max": 1
+  },
+  "C8": {
+   "contour": 1,
+   "contour_max": 4
+  },
+  "C11": {
+   "contour": 1,
+   "contour_max": 4
+  },
+  "D12": {
+   "contour": 2,
+   "contour_max": 4
+  },
+  "D13": {
+   "contour": 0,
+   "contour_max": 1
+  },
+  "E8": {
+   "contour": 2,
+   "contour_max": 6
+  },
+  "E13": {
+   "contour": 0,
+   "contour_max": 2
+  },
+  "F7": {
+   "contour": 0,
+   "contour_max": 1
+  },
+  "F12": {
+   "contour": 1,
+   "contour_max": 6
+  },
+  "G10": {
+   "contour": 0,
+   "contour_max": 3
+  },
+  "G13": {
+   "contour": 1,
+   "contour_max": 4
+  },
+  "H13": {
+   "contour": 0,
+   "contour_max": 3
+  },
+  "I13": {
+   "contour": 2,
+   "contour_max": 5
+  },
+  "J7": {
+   "contour": 0,
+   "contour_max": 1
+  },
+  "J10": {
+   "contour": 0,
+   "contour_max": 1
+  },
+  "J11": {
+   "contour": 0,
+   "contour_max": 4
   }
  },
  "roads": [
@@ -611,6 +745,6 @@
   "Woods type by colour (R7): heavy = E4, F3, F4, F5, F8, D9, G8, H8, I7, I8; check G6, F6 and H9.",
   "G11 (level 1) corrected to woods with the road through it (R15)."
  ],
- "contour_status": "North half (hexes with centre y < 2600: west and east hills, rows 0-7) reviewed and confirmed by user 2026-11-21 (F2 1/4, F3 3/4 saddle, F4 1/3, F5 1/2, C6 2/5 checked). South hill (rows 7-13) NOT done: no contour values written for it yet.",
+ "contour_status": "North half (hexes with centre y < 2600: west and east hills, rows 0-7) reviewed and confirmed by user 2026-11-21 (F2 1/4, F3 3/4 saddle, F4 1/3, F5 1/2, C6 2/5 checked). South hill (centre y >= 2600, rows 7-13) written 2026-11-21, awaiting user review; doubtful: I10 (dot on a line), F8 (line touches the dot), B12 (dot under the sector number), C11 max 4 (line runs along the hex edge; else 3), E12 max 8 (bold 2 just grazes the top edge; else 7). Self-checks passed: bold 1 reads 3|4 and bold 2 reads 7|8 all round; every transect steps by one; hill levels agree (level 1 iff dot >= 4, level 2 iff dot >= 8). Summits: D9 8, E11 9, F11 9, H11 10 (thin rings inside bold 2).",
  "contour_scheme": "contour = contour lines (thin or bold) between the centre dot and open ground, counted all the way out even through neighbouring hexes (R17 + clarification); contour_max = highest count inside the hexagon. Bold lines on this sector: bold 1 = 4, bold 2 = 8 (3 thin lines between bolds). Hexes not listed: 0/0."
 }

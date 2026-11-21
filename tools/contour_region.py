@@ -8,7 +8,7 @@ for pl in man.get('polylines', []): cv2.polylines(S, [np.array(pl, np.int32)], F
 B = cv2.dilate(S, np.ones((3, 3), np.uint8)) > 0
 n, lab = cv2.connectedComponents((~B).astype(np.uint8), connectivity=4)
 x, y = int(sys.argv[3]), int(sys.argv[4]); r = lab[y, x]
-im = cv2.imread('/home/claude/maps/reprint/10.jpg'); o = (0.55 * im + 0.45 * 255).astype(np.uint8)
+im = cv2.imread(__import__('os').environ.get('MAP', __file__.rsplit('/', 2)[0] + '/maps/reprint/10.jpg')); o = (0.55 * im + 0.45 * 255).astype(np.uint8)
 o[lab == r] = (0.5 * o[lab == r] + 0.5 * np.array([255, 0, 255])).astype(np.uint8)
 o[B] = (0, 0, 200)
 if len(sys.argv) > 6:

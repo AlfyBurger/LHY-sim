@@ -16,7 +16,7 @@ C = (lab == c).astype(np.uint8)
 nb = cv2.filter2D(C, -1, np.ones((3, 3), np.float32)) * C
 ends = [(int(a), int(b)) for b, a in np.argwhere(nb == 2)]
 print('component pixels', int(C.sum()), 'free ends', ends)
-im = cv2.imread('/home/claude/maps/reprint/10.jpg'); o = (0.6 * im + 0.4 * 255).astype(np.uint8)
+im = cv2.imread(__import__('os').environ.get('MAP', __file__.rsplit('/', 2)[0] + '/maps/reprint/10.jpg')); o = (0.6 * im + 0.4 * 255).astype(np.uint8)
 o[S > 0] = (150, 150, 150); o[cv2.dilate(C, np.ones((5, 5), np.uint8)) > 0] = (0, 0, 255)
 for e in ends: cv2.circle(o, e, 16, (255, 0, 255), 4)
 if len(sys.argv) > 6:
