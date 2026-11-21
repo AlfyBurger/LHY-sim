@@ -1,0 +1,177 @@
+# LHY — handoff (21 Nov 2026)
+
+Handoff for a new chat continuing the work on **/LHY** (The Last Hundred Yards, GMT) and **/wargame-learning**. Read this first, then `docs/stage1.md` (rulings) in the repo.
+
+## 1. The project
+
+- **Two skills to build:**
+  - **/LHY**: learn and play The Last Hundred Yards. Claude is opponent (difficulty levels 1–5), teacher and rules referee, and must be able to play either side of any mission.
+  - **/wargame-learning**: the general method for learning wargames. It must stay **free of LHY-specific content**. Its working notes are the Project doc `claude/wargame-learning-notes.md` (general lessons only; update it when a general lesson comes up).
+- **Stages:** the 5 stages of /boardgame-learning.
+  - Stage 2 = one general, mission-independent bot that reads each mission's victory conditions as data.
+  - Stage 3 = per-mission tactics and strategy layered on that bot (goal to be reviewed after Stage 2 testing).
+- **Scope:** Volume I (missions 1–12) first, then Volume II (13–22) and Mission Pack 1 (23–32). The user owns all three physically, with Volume I in the original 2019 printing.
+- **Rules in force:** Series Living Rules v4.4, Errata of 15 Oct 2026, Living Combat Tables of 19 Oct 2026. Optional rules (22.1, 22.2) are out.
+- **Play:** on Vassal first, then on the physical copy.
+
+## 2. Where everything is
+
+| What | Where |
+|---|---|
+| Code, data, rulings, tools | GitHub **AlfyBurger/LHY-sim** (private). Claude may commit and push freely to this repo. |
+| This handoff, canonical map images, sector data copies, review images | Mac folder **/Users/Alfy/Desktop/LHY** (see §8). |
+| General method notes | Project doc `claude/wargame-learning-notes.md` |
+| User-supplied files | Series Living Rules PDF and the LHY Europe Vassal module (v5.0.2). Not in the repo (art and copyright). Ask the user to attach them again if needed. |
+| GMT downloads | Listed with URLs in `docs/sources.md`; re-download as needed. Translations and superseded files were deliberately dropped. |
+
+**Repo layout:**
+- `docs/stage1.md`: intake, source precedence, rulings R1–R17 and finding F1, open questions Q1–Q6, process log.
+- `docs/stage1_inventory.md`: which rules sections Volume I uses, and where each kind of data lives.
+- `docs/sources.md`: provenance of every downloaded file.
+- `data/tables.json`: combat, terrain, blind hex, stacking, recovery, casualty track, time lapse and fate tables.
+- `data/mission_layouts_vol1.json`: sectors, position and rotation per Volume I mission, from the Vassal saves.
+- `data/sectors/N_reprint.json` (and paused `N_original.json`): terrain per sector (see §4).
+- `data/contour_work/10/`: sector 10 contour tracing state (see §6).
+- `tools/`: image and terrain tools. `tools/contour_pipeline.md` describes the contour pipeline.
+
+## 3. How the user wants to work
+
+- **Reviews:**
+  - Always show the **plain map side by side** with Claude's reading (never an overlay only), split into north and south halves at a readable size.
+  - The user reviews every sector.
+  - Reviewing is **tiring** for him. Do extensive self-checking first and send him **only the genuinely doubtful hexes**, marked.
+  - Deliver in parts when one part isn't ready, and say plainly why.
+- **Commits and skills:** commit and push freely to LHY-sim. Changes to the skills themselves need his review before being saved.
+- **General vs specific:** LHY-specific content goes in /LHY and the repo; general lessons go in the wargame-learning notes.
+- **Background:** he hasn't played LHY. GMT's documents are the main information source; check every product page, including volumes he doesn't own.
+- **Rulings:** record each one in `docs/stage1.md`. Read every hit of a rules search before saying a rule doesn't exist (`src/rules/living.txt` was extracted from the PDF; regenerate it with pdftotext).
+
+## 4. Map data: frame and format
+
+- **Printing:**
+  - Work on the **reprint (Vassal) maps only** (R10).
+  - The original-printing drafts (sectors 10, 11) are paused. The user will scan his physical maps when back home in France, and the original printing will be redone from those scans.
+  - GMT's "Vol. 1 Hidden Setup" sheets show the original printing (F1), but they are too washed out for him to review.
+- **Canonical frame** (the GMT hidden-setup image pixels, 3300×5100):
+  - Columns A–K, 330 px apart, starting at x = 0.
+  - Odd columns (A, C, E, G, I, K): y = 195 + 392·(row−1).
+  - Even columns (B, D, F, H, J): y = 391 + 392·(row−1).
+  - Row 0 = the north half hexes of the even columns (B0, D0, F0, H0, J0). Half hexes count as full hexes (R6).
+  - Hexes are flat-topped, circumradius 220.
+  - Helpers in `tools/hexgrid.py`: `center`, `all_hexes`, `neighbours` (order N, NE, SE, S, SW, NW), `to_frame`/`from_frame`.
+- **Vassal 5.0.2 sector images:**
+  - Landscape 2952×1968, north on the left.
+  - Transform: vx = y·227.1/392, vy = 1968 − x·196.44/330.
+  - Warped into the frame by `tools/vassal_to_canonical.py`. The results are the 12 images in the Mac folder `maps_reprint_canonical/`.
+- **Sector JSON:**
+  - `hexes`: per hex, `terrain` (open / woods / heavy woods / river / water…), `level` (hill level: centre dot inside bold contour k), `contour` and `contour_max`, plus bridge/ford flags.
+  - `roads`: lists of hex paths; off-map ends are written "@W", "@E", "@N", "@S" (R11).
+  - `walls` and `tree_lines`: hexside pairs.
+  - `buildings`: kind and traced polygon in frame pixels.
+  - Also `scatter`, `open_questions` and `status`.
+- **Terrain rulings** (full text in `docs/stage1.md`):
+  - Woods: by colour, dark green = heavy (R7); judged at the centre dot, with an edge exception for half hexes (R8).
+  - Road hexes keep the terrain beside the road; never judge the road surface at the dot (R15).
+  - A fading track is decoration, not road (R11, R13).
+  - River hexes are level −1, and a white dot marks a river hex (R12, R14).
+  - Water hexes (R16).
+  - Hill hex = centre dot inside a bold contour; thin lines don't make hills (R13).
+- **Contours (R17 + clarification, confirmed by the user):**
+  - `contour` = number of lines (thin or bold) between the centre dot and open ground, counted **all the way out, even through neighbouring hexes**.
+  - `contour_max` = highest count inside the hexagon.
+  - A bold line has one count along its whole length. On these maps bolds come every 4th line: bold 1 = 4, bold 2 = 8, unless a map shows otherwise.
+  - On a saddle, the dot can sit in the neck of a ring shared by two hills (sector 10 F3 = 3).
+  - Only the order of counts matters for LOS (4.2.1c–d).
+  - Unlisted hexes are 0/0.
+
+## 5. Status by sector (reprint)
+
+| Sector | Terrain (woods, roads, buildings, water, hills) | Contours (dot/max) |
+|---|---|---|
+| 11 | Reviewed by user 18 Nov, corrections applied | Not done |
+| 10 | **Confirmed** 19 Nov | North half (west + east hills) **confirmed 21 Nov**; **south hill not done** |
+| 4 | Draft, awaiting review | Not done |
+| 9 | User review 2 applied; **K12 edge road stub still to confirm** | Not done |
+| 12 | **Confirmed** 19 Nov (river level −1, bridges, ford) | Not done (river valley counts downward) |
+| 2 | Draft, awaiting review (east-edge road K7–K12 included; K11 woods with road) | Not done |
+| 7 | **Confirmed** 19 Nov | **Confirmed** (user corrections 19 Nov) |
+| 5 | **Confirmed** 19 Nov | Not done |
+| 1, 8, 6, 3 | Not started | Not started |
+
+Order of sectors as the missions use them: 11, 10, 4, 9, 12, 2, 7, 5, 1, 8, 6, 3. Each new sector needs:
+1. The automatic first pass (`tools/auto_sector.py`), then a visual check on centre-dot sheets.
+2. Buildings traced with seeded GrabCut (`tools/grabcut_buildings.py`).
+3. The road audit (`tools/road_audit.py`).
+4. A contour pass.
+5. The user's review (`tools/review_pair.py` for terrain, `tools/contour_review.py` for contours).
+
+## 6. Contours: method and the sector 10 south hill
+
+**Method.** Reading contours hex by hex by eye failed: lines in hex corners got counted, lines under woods were missed, and reviewing was tiring for the user. The working method traces every line, then computes levels:
+1. `tools/line_filter.py <canonical.jpg> resp.png resp.npy 61` builds an oriented dark-thin-line filter (it also saves `resp_ang.npy`). Takes a few minutes; regenerate it rather than storing it.
+2. `tools/contour_skeleton.py resp.npy skel.npy` thresholds and skeletonises the response, removes hex-corner marks, labels and dots, and prunes spurs. Sector 10's skeleton is saved as `data/contour_work/10/skeleton.npz` (key `skel`); its border lines were already removed.
+3. `tools/line_follow.py resp.npy waypoints.json polylines.json` follows hand-picked lines along the filter response, through gaps under woods, roads, labels and corners. Lines that run close together are better tracked column by column with `tools/column_track.py`. Those tracks are stored as `raw_polylines` in `manual.json`.
+4. `tools/contour_close.py skel.npy bridges.json 30 250 50 45 manual.json` closes gaps automatically. `manual.json` holds the polylines, bridges, `cuts` (junk strokes erased: road edges, woods shadows) and `veto` (wrong automatic bridges).
+5. `tools/contour_raster.py skel.npy - bridges.json levels.npy levels.png` gives each point the fewest lines crossed to reach open ground. It now uses 1-px barriers (env `CONTOUR_THIN=1`, the default).
+6. `tools/contour_hexvalues.py levels.npy skel.npy bridges.json values.json` writes the per-hex dot/max values.
+7. Self-checks, all before the user sees anything:
+   - `tools/contour_boldcheck.py`: each bold piece must read the same pair (3|4 for bold 1) all the way round.
+   - Hexes inside bold k must read above those outside it.
+   - `tools/contour_leakscan.py`, `contour_leakpath.py`, `contour_region.py`, `contour_linecomp.py`, `contour_adjwhy.py` and `contour_flat.py` find open or flat lines.
+   - `tools/contour_transect.py` prints band levels along a line.
+   - `tools/contour_sheet_pts.py` shows the plain map next to the traced lines at given points.
+   - `tools/contour_junctions.py` lists places where long lines meet (real contours never meet).
+   - Flag dots lying within about 18 px of a line.
+8. `tools/contour_review.py` makes the review image: plain map left, lines and dot/max right, doubtful hexes ringed.
+
+`data/contour_work/10/run.sh` chains steps 3–5 (it still uses /tmp paths from the old session: adapt them). The other files in that folder:
+- `waypoints.json` and `manual.json`: the hand-traced inputs.
+- `raster_values_all.json`: current values for all hexes. The south values in it are wrong.
+- `local_values_south_UNRELIABLE.json`: a failed experiment, kept for reference only.
+
+**Typical false lines:** road edges, woods shadows, hex-corner marks, the map border. **Typical missed lines:** two lines so close that the tracing merges them.
+
+**Sector 10 south hill (rows 7–13): the next job.**
+- It has three summits:
+  - D9: bold 2.
+  - E11/F11: bold 2.
+  - H11: bold 2.
+- One bold 1 surrounds all three.
+- Where the lines stay clearly apart (north of D9, east of H11, south of E11/F11), 3 thin lines sit between bold 1 and bold 2, so **bold 2 should count 8**. The raster gives 6: on several wooded slopes, lines that run together get merged by the tracing (or a thin line visually joins the bold), and the bands inside come out too low.
+- Bold 1 already checks correctly at 4 all round. Fixed so far:
+  - the H10 stretch, by column tracks `waistE_*` and `waistG10_*`;
+  - gaps at C10, D10, G10 and E11.
+- **To do:**
+  - Find each merged stretch on the inner slopes (`contour_flat.py` and `contour_adjwhy.py` show which bands touch a lower band, and where).
+  - Re-trace each stretch as separate lines with `column_track.py` or `line_follow.py`.
+  - Iterate until every bold 2 piece reads 7|8 and every bold 1 piece reads 3|4.
+  - Then write the south values into `data/sectors/10_reprint.json` (only the north half is in it now), make the review images and send the user only the doubtful hexes.
+- Do not use the bold-anchored local count (`contour_local.py`) for final values: its hex maximums were noisy.
+
+**Contours on the other sectors:** run the same pipeline: 11, 4, 9, 12 (the river valley counts down: river level −1), 2, 5, then the new sectors.
+
+## 7. Remaining Stage 1 work (in order)
+
+1. Sector 10 south-hill contours (above), then contours on 11, 4, 9, 12, 2 and 5.
+2. User reviews of the sector 4 and 2 drafts; the sector 9 K12 stub.
+3. Read sectors 1, 8, 6 and 3 (terrain, road audit, contours).
+4. Counter data: transcribe every counter, front and back (values differ squad by squad). Sources: Vassal piece images (front/back per unit) and GMT counter-sheet scans.
+5. Mission data for missions 1–12: forces, setup, objectives, MSRs, victory levels, with the errata applied. Mission-specific procedures are listed in `docs/stage1_inventory.md`.
+6. Settle open questions Q1–Q6 (`docs/stage1.md`).
+7. Rulings quiz (Stage 1 end), then build the /LHY skill draft and the /wargame-learning skill draft (both reviewed by the user before saving).
+8. Later: redo the original printing from the user's scans (Volume I is his original 2019 printing; errata differences in R1).
+
+## 8. The Mac folder /Users/Alfy/Desktop/LHY
+
+- `LHY-handoff.md`: this file (also in the repo as `docs/LHY-handoff.md`).
+- `maps_reprint_canonical/1.jpg … 12.jpg`: the Vassal reprint sectors warped into the canonical frame. All tools expect these; copy them to `maps/reprint/` in the new workspace.
+- `sector_data/`: copies of `data/sectors/*_reprint.json` as of this handoff. The repo is the master copy.
+- `reviews/`: the latest review images per sector. The checked sectors are 7, 10, 11, 12 and 5 (plus the 9 review). Sector 10's north-half contour images are `review_s10_contours_north_*.jpg`.
+
+## 9. Mistakes to avoid (from this phase)
+
+- Compare map printings only after putting both on the same hex grid.
+- Read every hit of a rules search before saying no rule exists (water hexes: 11.4.11).
+- Count lines only inside the hexagon, not in the square crop's corners. Outline hexagons in every crop.
+- Don't judge a road hex by the road surface at the centre dot.
+- Don't trust a single automatic contour count. Cross-check it against the bold lines and the clear slopes before showing anything.
